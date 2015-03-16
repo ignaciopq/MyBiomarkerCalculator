@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>Sliding</title>
+		<meta name="description" content="sliding" />
+		<meta name="keywords" content="background slideshow, boxes, background image, four panels, css, tutorial" />
+		<meta name="author" content="gbtags.com" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.custom.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div id="boxgallery" class="boxgallery" data-effect="effect-1">				
+				<div class="panel"><!--<img src="img/1.jpg" alt="Image 1"/>--><div style = "background-image = url(img/1.jpg)"></div></div>
+				<div class="panel"><!--<img src="img/2.jpg" alt="Image 2"/>--><div style = "background-image = url(img/2.jpg)"></div></div>
+				<div class="panel"><!--<img src="img/3.jpg" alt="Image 3"/>--><div style = "background-image = url(img/3.jpg)"></div></div>
+				<div class="panel"><!--<img src="img/4.jpg" alt="Image 4"/>--><div style = "background-image = url(img/4.jpg)"></div></div>
+			</div>
+			<header class="codrops-header">
+				<h1>Slidingshow</h1>
+				<nav class="codrops-demos">
+<!--				
+				<a class="current-demo" href="index.html">rotation style</a>	
+				<a href="index2.html">horizontal style</a>
+				<a href="index3.html">Dropping style</a> 
+-->
+				</nav>
+			</header>
+		</div><!-- /container -->
+		<script src="js/classie.js"></script>
+		<script src="js/boxesFx.js"></script>
+		<script>
+			new BoxesFx( document.getElementById( 'boxgallery' ) );
+		</script>
+	</body>
+</html>
