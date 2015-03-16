@@ -1120,31 +1120,3 @@
 		cursor: grabbing;
 	}
 	
-	/* Categories placeholders */
-	
-	.drop-area {
-		position: fixed;
-		top: 100%;
-		left: 0;
-		z-index: 99;
-		width: 100%;
-		height: 160px;
-		text-align: center;
-		font-size: 3em;
-		pointer-events: none;
-	}
-
-	.drop-area__item {
-		position: relative;
-		display: inline-block;
-		padding: 0 0.5em;
-		max-width: calc(20% - 0.3em);
-		border-radius: 10px;
-		color: #2fa0ec;
-		line-height: 120px;
-		-webkit-transition: -webkit-transform 0.3s, color 0.3s;
-		transition: transform 0.3s, color 0.3s;
-	} 
-	
-
-	
