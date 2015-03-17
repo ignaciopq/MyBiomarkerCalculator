@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>My Biomarkers Calculator</title>
-		<link href="images/Calculator.gif" type="image/gif" rel="shortcut icon" />
+		<link href="images/Calculator2.gif" type="image/gif" rel="shortcut icon" />
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -15,6 +15,8 @@
 <!-- 		<script src="js/init.js"></script> -->
 <!-- 		<noscript> -->
 			<script src="js/jquery-1.10.2.js"></script>
+			<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+			<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
 			<script src="js/calculator.js"></script>
 			<script src="js/modernizr.custom.js"></script>
 			
@@ -42,17 +44,17 @@
 		<!-- Banner -->
 			<section id="banner">
 				<h2>Welcome to My Biomarkers Calculator</h2>
-				<img src="images/Calculator.gif" alt="Calculator" class="icon rounded big">
+				<img src="images/Calculator2.gif" alt="Calculator" class="icon rounded big">
 				<p>My Biomarkers Calculator is an interactive tool that gives you
 					an estimate of different biomarkers in your body according to your
 					personal characteristics based on data gathered by NHANES survey.</p>
-				<ul class="actions">
+<!-- 				<ul class="actions"> -->
 						<a href="JavaScript:void(0)" class="button big" id="CalculateButton">Calculate</a>		
-				</ul>
+<!-- 				</ul> -->
 			</section>
 
 		<!-- One -->
-			<section id="one" class="wrapper style1 align-center invisible">
+			<section id="categories" class="wrapper style1 align-center invisible">
 				<div class="container">
 					<header>
 						<h2>Select One or More Categories</h2>
@@ -65,7 +67,7 @@
 						<div class="grid__item">Residence</div>
 					</div>
 
-					<div id="drop-area" class="drop-area">
+					<div id="my-drop-area" class="my-drop-area">
 						<div>
 							<div class="drop-area__item">
 								<div class="dummy"></div>
@@ -83,6 +85,18 @@
 					</div>
 				</div>
 			</section>
+
+			<div id="questionary-area" class="questionary-area">
+				<div>
+					<div class="questionary__item">
+						<div class="question">Here you place the question</div>
+						<div class="answer">This space is for the answer</div>
+					</div>
+					<a href="JavaScript:void(0)" class="button big" id="SaveQuestionButton">Save</a>
+					<a href="JavaScript:void(0)" class="button big" id="CancelQuestionButton">Cancel</a>
+				</div>
+			</div>
+
 
 		<!-- Two -->
 			<section id="two" class="wrapper style2 align-center invisible">

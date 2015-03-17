@@ -3,21 +3,26 @@
  * 
  */
 window.onload = function() {
+	$("#CancelQuestionButton").click(function() {
+		questionaryArea = document.getElementById('questionary-area');
+		classie.remove(questionaryArea,'show');
+	});
+	
 	$("#CalculateButton").click(function() {
 		// display section smoothly
-		$("#one").slideDown(2000);
+		$("#categories").slideDown(2000);
 
 		// Scroll down to section 
 		$('html, body').animate({
-			scrollTop : $("#one").offset().top
+			scrollTop : $("#categories").offset().top
 		}, 1000);
 	});
 
 	// drag and drop functions
 
-	var body = document.body, inputArea = document.getElementById('two'), droppableArr = [], dropAreaTimeout;
+	var body = document.body, droppableArr = [], dropAreaTimeout;
 	// initialize droppables
-	[].slice.call(document.querySelectorAll('#drop-area .drop-area__item'))
+	[].slice.call(document.querySelectorAll('#my-drop-area .drop-area__item'))
 			.forEach(function(el) {
 				droppableArr.push(new Droppable(el, {
 					onDrop : function(instance, draggableEl) {
@@ -25,7 +30,7 @@ window.onload = function() {
 						classie.add(instance.el, 'drop-feedback');
 						clearTimeout(instance.checkmarkTimeout);
 						instance.checkmarkTimeout = setTimeout(function() {
-							//classie.remove(instance.el,'drop-feedback');
+//							classie.remove(instance.el,'drop-feedback');
 						}, 800);
 						// ...
 					}
@@ -48,13 +53,17 @@ window.onload = function() {
 //						 classie.add(dropArea, 'show');
 					},
 					onEnd : function(wasDropped) {
+						inputArea = document.getElementById('two');
+						questionaryArea = document.getElementById('questionary-area');
+						
 						var afterDropFn = function() {
-							// show inputArea
+							// show corresponding questionary
+							classie.add(questionaryArea, 'show');
 							classie.add(inputArea, 'show');
 							// hide dropArea
 							// classie.remove(dropArea,'show');
 							// remove class 'drag-active' from body
-							$("#two").slideDown(2000);
+//							$("#two").slideDown(2000);
 							classie.remove(body, 'drag-active');
 						};
 
