@@ -27,6 +27,7 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	overflow: hidden;
+	padding: 0px;
 }
 
 /* New definitions */
@@ -111,6 +112,7 @@
 	background: black;
 	color: white;
 	font-size: 15pt;
+	padding-bottom: 0.5em;
 }
 
 .grid__item.ui-draggable-dragging { 
@@ -171,8 +173,8 @@
 	width: 400px;
 	float: left;
 	border-style: dotted;
-	border-color: black;
-	border-width: 4pt;	
+	border-color: #453242;
+	border-width: 8pt;	
 	border-radius: 10px;
 	padding: 2em;
 	margin-left: 325px;
@@ -207,27 +209,46 @@
 }
 
 #categories > header {
-	background: #9ba7b3;
-	padding: 10px;
-	margin: 0px;
 	text-align: left;
+	font-size: 1.5em;
+	margin-bottom: 0px;
 }
-
-
 
 aside {
 	width: 14em;
 	float: left;
-	background: #7C868F;
-/* 	background:  #9ba7b3; */
 	padding: 0em;
-	padding-bottom: 1em; 
+	padding-bottom: 1em;
+	border-style: solid;
+	border-color:  #453242;
+	border-width: 4px;
 }
 
-.aside-header {
-	width: 14em;
+.aside-top {
+	width: 243px;
 }
 
+/* common background color for side bar and top navigation bar*/
+#categories > header, aside {
+	background: #7C868F;	
+}
+
+.bar-element {
+	text-align: center;
+	display: inline-block;
+	font-size: 50%;
+	border-color: #4A5056;
+	border-width: 1px;
+	border-radius: 2px;
+	border-right-style: solid;
+	margin-right: -6px; 
+}
+
+.bar-element > a {
+/* 	padding: 0px; */
+/* 	margin: 0px; */
+	background: transparent;
+}
 
 .container {
 	width: 100%;
@@ -248,8 +269,16 @@ aside {
 	background-color: #563f53;
 }
 
-.button:hover,.button:active  {
+.button:hover,.button:active, .bar-element:hover, #category-subtitle{
 	background-color: #453242;
+}
+.bar-element:hover {
+	border-color: #261C25;	
+}
+
+
+.bar-element>a:hover {
+	background-color: transparent;
 }
 
 .button.alt {
@@ -260,4 +289,9 @@ aside {
 
 .button.alt:hover,.button.alt:active  {
 	background-color: #563f53;
+}
+
+.slide {
+	max-height: 400px;
+	max-width: 400px;
 }

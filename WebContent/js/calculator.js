@@ -39,13 +39,31 @@ window.onload = function() {
 		}
 	}
 	
-	$("#CalculateButton").click(function() {
+	/* Button for displaying categories section */
+	$("#ContinueButton").click(function() {
 		// display section smoothly
-		$("#categories").slideDown(2000);
+		
+		$( "#banner" ).slideUp( 1000, function() {
+			$("#categories").slideDown(1000);
+		  });
 
 		// Scroll down to section 
 		$('html, body').animate({
 			scrollTop : $("#categories").offset().top
+		}, 1000);
+	});
+	
+	$("#TopButton").click(function() {
+		// display section smoothly
+		
+		
+		$( "#categories" ).slideUp( 1000, function() {
+			$("#banner").slideDown(1000);
+		  });
+
+		// Scroll down to section 
+		$('html, body').animate({
+			scrollTop : $("#banner").offset().top
 		}, 1000);
 	});
 	
@@ -88,5 +106,5 @@ window.onload = function() {
 		}
 		return null;
 	}
-	
+	slider();
 };

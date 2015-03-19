@@ -21,35 +21,41 @@
 
 <body class="landing">
 
-	<!-- Header -->
-	<header id="header">
-		<h1><a href="index.html">Home</a></h1>
-		<nav id="nav">
-			<ul>
-				<li><a href="generic.html">NHANES</a></li>
-				<li><a href="elements.html">About</a></li>
-			</ul>
-		</nav>
-	</header>
+	
 
 	<!-- Banner -->
 	<section id="banner">
+		<!-- Header -->
+		<header id="header">
+			<h1><a href="index.html">Home</a></h1>
+			<nav id="nav">
+				<ul>
+					<li><a href="generic.html">NHANES</a></li>
+					<li><a href="elements.html">About</a></li>
+				</ul>
+			</nav>
+		</header>
 		<h2>Welcome to My Biomarkers Calculator</h2>
+		
 		<img src="images/Calculator2.gif" alt="Calculator"	class="icon rounded big">
 		<p>My Biomarkers Calculator is an interactive tool that gives you
 			an estimate of different biomarkers in your body according to your
 			personal characteristics based on data gathered by NHANES survey.</p>
-		<a href="JavaScript:void(0)" class="button big" id="CalculateButton">Calculate</a>
+		<a href="JavaScript:void(0)" class="button big" id="ContinueButton">Continue</a>
 	</section>
 
 	<!-- One -->
-	<section id="categories" class="wrapper style1 align-center">
+	<section id="categories" class="wrapper style1 align-center invisible">
 		<header>
-			<div class="aside-header">
-				<img src="images/Calculator2.gif" alt="Calculator"	class="bar-icon">
+			<div class="bar-element aside-top">
+				<a href="JavaScript:void(0)" class="button big" id="TopButton">Back to Top</a>
 			</div>
-<!-- 				<a href="JavaScript:void(0)" class="button" id="resetButton">Reset</a> -->
-<!-- 				<a href="JavaScript:void(0)" class="button" id="GoButton">Go!</a> -->
+			<div class="bar-element category-top">
+				<a href="JavaScript:void(0)" class="button big" id="CategoriesButton">Categories</a>
+			</div>
+			<div class="bar-element">
+				<a href="JavaScript:void(0)" class="button big" id="QuestionaryButton">Questionary</a>
+			</div>
 		</header>
 		
 		<div class="container">
@@ -110,6 +116,11 @@
 					<div id="slot-6" class="drop-area__item"></div>
 					<div id="slot-7" class="drop-area__item"></div>
 					<div id="slot-8" class="drop-area__item"></div>
+			</div>
+			
+			<div>
+				<img src="images/Calculator2.gif" alt="Calculator"	class="icon rounded big">
+				<p> Calculate</p>
 			</div>
 		</div>
 	</section>
@@ -217,6 +228,12 @@
 			</ul>
 		</div>
 	</footer>
-
+<!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
+    
 </body>
 </html>
