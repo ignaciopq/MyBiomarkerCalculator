@@ -3,6 +3,10 @@
  * 
  */
 window.onload = function() {
+	
+	var currentDraggable = null;
+	var availableSlot = [true,true,true,true,true,true,true,true,true];
+	
 	$("#CancelQuestionButton").click(function() {
 		questionaryArea = document.getElementById('questionary-area');
 		$(questionaryArea).removeClass('show');
@@ -11,7 +15,29 @@ window.onload = function() {
 		for (var i = 0; i < questions.length; i++) {
 			$(questions[i]).addClass("invisible");
 		}
+		
+		returnDraggable();
 	});
+	
+	/* Return draggable to its initial position*/
+	function returnDraggable() {
+		var origin = document.getElementById($(currentDraggable).attr("id")+"-origin");
+		$(currentDraggable).draggable( 'enable' );
+		$(currentDraggable).draggable( 'option', 'revert', true );
+		$(currentDraggable).removeClass('grid__item-reduced');
+		$(currentDraggable).position( { of: $(origin), my: 'center', at: 'center' } );
+		releaseSlot();
+		currentDraggable = null;
+	}
+	
+	/* Release one slot */
+	function releaseSlot() {
+		for (var i= availableSlot.length-1; i >=0 ; i--) {
+			if (!availableSlot[i]) {
+				availableSlot[i]=true;
+			}
+		}
+	}
 	
 	$("#CalculateButton").click(function() {
 		// display section smoothly
@@ -32,18 +58,6 @@ window.onload = function() {
 		});
 	}
 	
-	/* creating the droppable place holders for the categories*/
-//	var droppables = document.querySelectorAll('#my-drop-area div');
-//	for (var i = 0; i < droppables.length ; i++) {
-//		$(droppables[i]).droppable( {
-//			accept: '#grid div',
-//			hoverClass: 'highlight',
-//		    drop: handleDrop
-//		});
-//	}
-	
-	var availableSlot = [true,true,true,true,true,true,true,true,true];
-	
 	/* Define Droppable area*/
 	var droppableArea = document.querySelector('#my-drop-area');
 	$(droppableArea).droppable( {
@@ -61,6 +75,7 @@ window.onload = function() {
 		$(question).removeClass("invisible");
 		$("#questionary-area").addClass("show");
 		ui.draggable.draggable( 'disable' );
+		currentDraggable = ui.draggable;
 	}
 	
 	function getNextAvailable() {

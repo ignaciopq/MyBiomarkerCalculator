@@ -70,7 +70,9 @@
 	width: 45px;
 	display: block;
 	margin: auto;
+	opacity: 0.5;
 	}
+
 	
 .grid {
 /* 	margin: 0 auto; */
@@ -81,7 +83,7 @@
 .grid__item {
 	font-size: 15pt;
 	display: inline-block;
-	margin: 5px;
+/* 	margin: 5px; */
 	border-radius: 6px;
 	width: 100px;
 	height: 100px;
@@ -93,6 +95,18 @@
 	padding-top: 25px;
 }
 
+.grid-frame {
+/* 	border-width: 2px; */
+/* 	border-color: black; */
+/* 	border-style: solid; */
+	display: inline-block;
+	padding: 0px;
+	margin: 5px;
+	border-radius: 8px;
+	background: #9ba7b3;
+/* 	background: #7C868F; */
+}
+
 #category-subtitle {
 	background: black;
 	color: white;
@@ -100,7 +114,7 @@
 }
 
 .grid__item.ui-draggable-dragging { 
-	background: black; 
+	background: #563f53; 
 }
 
 .grid__item-reduced {
@@ -117,37 +131,41 @@
 	cursor: grab;
 }
 
+.grid__item:hover img {
+	opacity: 1;
+}
+
 .grid__item:active {
 	cursor: -webkit-grabbing;
 	cursor: grabbing;
 }
 
-.is-dragging {
-	background: #4e4c52;
-}
+/* .is-dragging { */
+/* 	background: #4e4c52; */
+/* } */
 
-.is-active {
-	z-index: 100;
-}
+/* .is-active { */
+/* 	z-index: 100; */
+/* } */
 
-.is-dropped {
-	opacity: 0;
-	-webkit-transform: scale3d(0.7,0.7,1) !important;
-	transform: scale3d(0.7,0.7,1) !important;
-}
+/* .is-dropped { */
+/* 	opacity: 0; */
+/* 	-webkit-transform: scale3d(0.7,0.7,1) !important; */
+/* 	transform: scale3d(0.7,0.7,1) !important; */
+/* } */
 
-.is-complete {
-	opacity: 1;
-	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s !important;
-	transition: opacity 0.3s, transform 0.3s !important;
-	-webkit-transform: scale3d(1,1,1) !important;
-	transform: scale3d(1,1,1) !important;
-}
+/* .is-complete { */
+/* 	opacity: 1; */
+/* 	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s !important; */
+/* 	transition: opacity 0.3s, transform 0.3s !important; */
+/* 	-webkit-transform: scale3d(1,1,1) !important; */
+/* 	transform: scale3d(1,1,1) !important; */
+/* } */
 
-.animate {
-	-webkit-transition: all 0.3s ease-out;
-	transition: all 0.3s ease-out;
-}
+/* .animate { */
+/* 	-webkit-transition: all 0.3s ease-out; */
+/* 	transition: all 0.3s ease-out; */
+/* } */
 
 .my-drop-area {
 	width: 400px;
@@ -200,7 +218,8 @@
 aside {
 	width: 14em;
 	float: left;
-	background:  #9ba7b3;
+	background: #7C868F;
+/* 	background:  #9ba7b3; */
 	padding: 0em;
 	padding-bottom: 1em; 
 }
