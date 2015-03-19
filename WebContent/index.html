@@ -1,202 +1,202 @@
 <!DOCTYPE html>
 
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<title>My Biomarkers Calculator</title>
-		<link href="images/Calculator2.gif" type="image/gif" rel="shortcut icon" />
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-<!-- 		<script src="js/jquery.min.js"></script> -->
-<!-- 		<script src="js/skel.min.js"></script> -->
-<!-- 		<script src="js/skel-layers.min.js"></script> -->
-<!-- 		<script src="js/init.js"></script> -->
-<!-- 		<noscript> -->
-			<script src="js/jquery-1.10.2.js"></script>
-			<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
-			<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
-			<script src="js/calculator.js"></script>
-			<script src="js/modernizr.custom.js"></script>
-			
-			<link rel="stylesheet" href="css/skel.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/calculator.css" />
-			<link rel="stylesheet" href="css/style-xlarge.css" />
-			<link rel="stylesheet" href="css/icons.css" />
-<!-- 		</noscript> -->
-		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
-	</head>
-	<body class="landing">
+<head>
+<meta charset="UTF-8">
+<title>My Biomarkers Calculator</title>
+<link href="images/Calculator2.gif" type="image/gif" rel="shortcut icon" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<script src="js/jquery-1.10.2.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/calculator.js"></script>
 
-		<!-- Header -->
-			<header id="header">
-				<h1><a href="index.html">Home</a></h1>
-				<nav id="nav">
-					<ul>
-						<li><a href="generic.html">NHANES</a></li>
-						<li><a href="elements.html">About</a></li>
-					</ul>
-				</nav>
-			</header>
+<link rel="stylesheet" href="css/base/skel.css" />
+<link rel="stylesheet" href="css/base/style.css" />
+<link rel="stylesheet" href="css/base/style-xlarge.css" />
+<link rel="stylesheet" href="css/base/icons.css" />
+<link rel="stylesheet" href="css/calculator.css" />
+</head>
 
-		<!-- Banner -->
-			<section id="banner">
-				<h2>Welcome to My Biomarkers Calculator</h2>
-				<img src="images/Calculator2.gif" alt="Calculator" class="icon rounded big">
-				<p>My Biomarkers Calculator is an interactive tool that gives you
-					an estimate of different biomarkers in your body according to your
-					personal characteristics based on data gathered by NHANES survey.</p>
-<!-- 				<ul class="actions"> -->
-						<a href="JavaScript:void(0)" class="button big" id="CalculateButton">Calculate</a>		
-<!-- 				</ul> -->
-			</section>
+<body class="landing">
 
-		<!-- One -->
-			<section id="categories" class="wrapper style1 align-center invisible">
-				<div class="container">
-					<header>
-						<h2>Select One or More Categories</h2>
-						<p>Drag Selected Icons and	Drop Them Into a Placeholder</p>
-					</header>
-					<div id="grid" class="grid clearfix">
-						<div class="grid__item">Age</div>
-						<div class="grid__item">Country</div>
-						<div class="grid__item">Gender</div>
-						<div class="grid__item">Residence</div>
-					</div>
+	<!-- Header -->
+	<header id="header">
+		<h1><a href="index.html">Home</a></h1>
+		<nav id="nav">
+			<ul>
+				<li><a href="generic.html">NHANES</a></li>
+				<li><a href="elements.html">About</a></li>
+			</ul>
+		</nav>
+	</header>
 
-					<div id="my-drop-area" class="my-drop-area">
-						<div>
-							<div class="drop-area__item">
-								<div class="dummy"></div>
-							</div>
-							<div class="drop-area__item">
-								<div class="dummy"></div>
-							</div>
-							<div class="drop-area__item">
-								<div class="dummy"></div>
-							</div>
-							<div class="drop-area__item">
-								<div class="dummy"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+	<!-- Banner -->
+	<section id="banner">
+		<h2>Welcome to My Biomarkers Calculator</h2>
+		<img src="images/Calculator2.gif" alt="Calculator"	class="icon rounded big">
+		<p>My Biomarkers Calculator is an interactive tool that gives you
+			an estimate of different biomarkers in your body according to your
+			personal characteristics based on data gathered by NHANES survey.</p>
+		<a href="JavaScript:void(0)" class="button big" id="CalculateButton">Calculate</a>
+	</section>
 
-			<div id="questionary-area" class="questionary-area">
-				<div>
-					<div class="questionary__item">
-						<div class="question">Here you place the question</div>
-						<div class="answer">This space is for the answer</div>
-					</div>
-					<a href="JavaScript:void(0)" class="button big" id="SaveQuestionButton">Save</a>
-					<a href="JavaScript:void(0)" class="button big" id="CancelQuestionButton">Cancel</a>
-				</div>
+	<!-- One -->
+	<section id="categories" class="wrapper style1 align-center invisible">
+		<header>
+			<div class="aside-header">
+				<img src="images/Calculator2.gif" alt="Calculator"	class="bar-icon">
 			</div>
-
-
-		<!-- Two -->
-			<section id="two" class="wrapper style2 align-center invisible">
-				<div class="container">
-					<header>
-						<h2>Lorem ipsum dolor sit</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, autem.</p>
-					</header>
-					<div class="row">
-						<section class="feature 6u 12u$(small)">
-							<img class="image fit" src="images/pic01.jpg" alt="" />
-							<h3 class="title">Lorem ipsum dolor</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore ipsa voluptate, quae quibusdam. Doloremque similique, reiciendis sit quibusdam aperiam? Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-						</section>
-						<section class="feature 6u$ 12u$(small)">
-							<img class="image fit" src="images/pic02.jpg" alt="" />
-							<h3 class="title">Esse, fugiat, in</h3>
-							<p>Natus perspiciatis fugit illum porro iusto fuga nam voluptas minima voluptates deserunt, veniam reiciendis harum repellat necessitatibus. Animi, adipisci qui. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-						</section>
-						<section class="feature 6u 12u$(small)">
-							<img class="image fit" src="images/pic03.jpg" alt="" />
-							<h3 class="title">Voluptates, repudiandae, dolor</h3>
-							<p>Voluptatibus repellendus tempora, quia! Consequuntur atque, rerum quis, ullam labore officiis ipsa beatae dolore, assumenda eos harum repudiandae, qui ab! Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-						</section>
-						<section class="feature 6u$ 12u$(small)">
-							<img class="image fit" src="images/pic04.jpg" alt="" />
-							<h3 class="title">Eveniet, reiciendis, veniam</h3>
-							<p>Rem nulla molestiae inventore quibusdam repudiandae doloremque eveniet ullam, qui autem possimus saepe laudantium numquam sapiente vel. Repudiandae, nihil tempore. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-						</section>
+<!-- 				<a href="JavaScript:void(0)" class="button" id="resetButton">Reset</a> -->
+<!-- 				<a href="JavaScript:void(0)" class="button" id="GoButton">Go!</a> -->
+		</header>
+		
+		<div class="container">
+			<aside>
+				<div id="category-subtitle">Categories</div>
+				<div id="grid" class="grid clearfix">
+					<div id="age" class="grid__item">
+						<img src="images/age_icon.jpg" alt="ageIcon" class="category-icon">Age
 					</div>
-					<footer>
-						<ul class="actions">
-							<li>
-								<a href="#" class="button alt big">Learn More</a>
-							</li>
-						</ul>
-					</footer>
+					<div id="country" class="grid__item">
+						<img src="images/country_icon.png" alt="countryIcon" class="category-icon">Country
+					</div>
+					<div id="gender" class="grid__item">
+						<img src="images/gender_icon.jpg" alt="genderIcon" class="category-icon">Gender
+					</div>
+					<div id="income" class="grid__item">
+						<img src="images/income_icon.png" alt="incomeIcon" class="category-icon">Income
+					</div>
+					<div id="education" class="grid__item">
+						<img src="images/education_icon.png" alt="educationIcon" class="category-icon">Education</div>
+					<div id="smoking" class="grid__item">
+						<img src="images/smoking_icon.png" alt="smokingIcon" class="category-icon">Smoking</div>
+					<div id="race" class="grid__item">
+						<img src="images/race_icon.png" alt="raceIcon" class="category-icon">Ethnicity</div>
+					<div id="diet" class="grid__item">
+						<img src="images/diet_icon.jpg" alt="dietIcon" class="category-icon">Diet</div>
 				</div>
-			</section>
+			</aside>
 
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="container">
-					<div class="row">
-						<section class="4u 6u(medium) 12u$(small)">
-							<h3>Lorem ipsum</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, cumque!</p>
-							<ul class="alt">
-								<li><a href="#">Lorem ipsum dolor sit amet.</a></li>
-								<li><a href="#">Quod adipisci perferendis et itaque.</a></li>
-								<li><a href="#">Itaque eveniet ullam, veritatis reiciendis?</a></li>
-								<li><a href="#">Accusantium repellat accusamus a, soluta.</a></li>
-							</ul>
-						</section>
-						<section class="4u 6u$(medium) 12u$(small)">
-							<h3>Nostrum, repellat!</h3>
-							<p>Tenetur voluptate exercitationem eius tempora! Obcaecati suscipit, soluta earum blanditiis.</p>
-							<ul class="alt">
-								<li><a href="#">Lorem ipsum dolor sit amet.</a></li>
-								<li><a href="#">Id inventore, qui necessitatibus sunt.</a></li>
-								<li><a href="#">Deleniti eum odit nostrum eveniet.</a></li>
-								<li><a href="#">Illum consectetur quibusdam eos corporis.</a></li>
-							</ul>
-						</section>
-						<section class="4u$ 12u$(medium) 12u$(small)">
-							<h3>Contact Us</h3>
-							<ul class="icons">
-								<li><a href="#" class="icon rounded fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon rounded fa-facebook"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon rounded fa-pinterest"><span class="label">Pinterest</span></a></li>
-								<li><a href="#" class="icon rounded fa-google-plus"><span class="label">Google+</span></a></li>
-								<li><a href="#" class="icon rounded fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							</ul>
-							<ul class="tabular">
-								<li>
-									<h3>Address</h3>
-									1234 Somewhere Road<br>
-									Nashville, TN 00000
-								</li>
-								<li>
-									<h3>Mail</h3>
-									<a href="#">someone@untitled.tld</a>
-								</li>
-								<li>
-									<h3>Phone</h3>
-									(000) 000-0000
-								</li>
-							</ul>
-						</section>
-					</div>
-					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li>
-						<li>Design: <a href="http://templated.co">TEMPLATED</a></li>
-						<li>Images: <a href="http://unsplash.com">Unsplash</a></li>
+			<p >Drag and Drop Icons Into into the Selection Area</p>
+			<div id="my-drop-area" class="my-drop-area">
+					<div id="slot-0" class="drop-area__item"></div>
+					<div id="slot-1" class="drop-area__item"></div>
+					<div id="slot-2" class="drop-area__item"></div>
+					<div id="slot-3" class="drop-area__item"></div>
+					<div id="slot-4" class="drop-area__item"></div>
+					<div id="slot-5" class="drop-area__item"></div>
+					<div id="slot-6" class="drop-area__item"></div>
+					<div id="slot-7" class="drop-area__item"></div>
+					<div id="slot-8" class="drop-area__item"></div>
+			</div>
+		</div>
+	</section>
+
+	<div id="questionary-area" class="questionary-area">
+		<div id="age-question" class="questionary__item invisible">
+			<div class="question">How old are you?</div>
+			<input type="text" class="answer" />
+		</div>
+		<div id="country-question" class="questionary__item invisible">
+			<div class="question">Where were you born?</div>
+			<input type="text" class="answer" />
+			<div class="question">How long have you lived in the US?</div>
+			<input type="text" class="answer" />
+		</div>
+		<div id="gender-question" class="questionary__item invisible">
+			<div class="question">Are you male of female?</div>
+			<input type="text" class="answer" />
+		</div>
+		<div id="income-question" class="questionary__item invisible">
+			<div class="question">What is your total house income?</div>
+			<input type="text" class="answer" />
+		</div>
+		<div id="education-question" class="questionary__item invisible">
+			<div class="question">What is your highest level of education?</div>
+			<input type="text" class="answer" />
+		</div>
+		<div id="smoking-question" class="questionary__item invisible">
+			<div class="question">Do you smoke?</div>
+			<input type="text" class="answer" />
+		</div>
+		<div id="race-question" class="questionary__item invisible">
+			<div class="question">What is your race/ethnicity?</div>
+			<input type="text" class="answer" />
+		</div>
+		<div id="diet-question" class="questionary__item invisible">
+			<div class="question">Do you eat fish?</div>
+			<input type="text" class="answer" />
+			<div class="question">How often do you eat fish?</div>
+			<input type="text" class="answer" />
+		</div>
+		<a href="JavaScript:void(0)" class="button alt"	id="SaveQuestionButton">Save</a>
+		<a href="JavaScript:void(0)" class="button alt" id="CancelQuestionButton">Cancel</a>
+	</div>
+
+
+	<!-- Footer -->
+	<footer id="footer">
+		<div class="container">
+			<div class="row">
+				<section class="4u 6u(medium) 12u$(small)">
+					<h3>Lorem ipsum</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+						Assumenda, cumque!</p>
+					<ul class="alt">
+						<li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+						<li><a href="#">Quod adipisci perferendis et itaque.</a></li>
+						<li><a href="#">Itaque eveniet ullam, veritatis
+								reiciendis?</a></li>
+						<li><a href="#">Accusantium repellat accusamus a, soluta.</a></li>
 					</ul>
-				</div>
-			</footer>
-	
-	<div class="drop-overlay"></div>
-	<script src="js/draggabilly.pkgd.min.js"></script>
-	<script src="js/dragdrop.js"></script>
-	</body>
+				</section>
+				<section class="4u 6u$(medium) 12u$(small)">
+					<h3>Nostrum, repellat!</h3>
+					<p>Tenetur voluptate exercitationem eius tempora! Obcaecati
+						suscipit, soluta earum blanditiis.</p>
+					<ul class="alt">
+						<li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+						<li><a href="#">Id inventore, qui necessitatibus sunt.</a></li>
+						<li><a href="#">Deleniti eum odit nostrum eveniet.</a></li>
+						<li><a href="#">Illum consectetur quibusdam eos corporis.</a></li>
+					</ul>
+				</section>
+				<section class="4u$ 12u$(medium) 12u$(small)">
+					<h3>Contact Us</h3>
+					<ul class="icons">
+						<li><a href="#" class="icon rounded fa-twitter"><span
+								class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon rounded fa-facebook"><span
+								class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon rounded fa-pinterest"><span
+								class="label">Pinterest</span></a></li>
+						<li><a href="#" class="icon rounded fa-google-plus"><span
+								class="label">Google+</span></a></li>
+						<li><a href="#" class="icon rounded fa-linkedin"><span
+								class="label">LinkedIn</span></a></li>
+					</ul>
+					<ul class="tabular">
+						<li>
+							<h3>Address</h3> 1234 Somewhere Road<br> Nashville, TN 00000
+						</li>
+						<li>
+							<h3>Mail</h3> <a href="#">someone@untitled.tld</a>
+						</li>
+						<li>
+							<h3>Phone</h3> (000) 000-0000
+						</li>
+					</ul>
+				</section>
+			</div>
+			<ul class="copyright">
+				<li>&copy; Untitled. All rights reserved.</li>
+				<li>Design: <a href="http://templated.co">TEMPLATED</a></li>
+				<li>Images: <a href="http://unsplash.com">Unsplash</a></li>
+			</ul>
+		</div>
+	</footer>
+
+</body>
 </html>

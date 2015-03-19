@@ -5,7 +5,12 @@
 window.onload = function() {
 	$("#CancelQuestionButton").click(function() {
 		questionaryArea = document.getElementById('questionary-area');
-		classie.remove(questionaryArea,'show');
+		$(questionaryArea).removeClass('show');
+		/* remove all questions from question area*/
+		var questions = document.querySelectorAll('#questionary-area > div');
+		for (var i = 0; i < questions.length; i++) {
+			$(questions[i]).addClass("invisible");
+		}
 	});
 	
 	$("#CalculateButton").click(function() {
@@ -17,64 +22,56 @@ window.onload = function() {
 			scrollTop : $("#categories").offset().top
 		}, 1000);
 	});
-
-	// drag and drop functions
-
-	var body = document.body, droppableArr = [], dropAreaTimeout;
-	// initialize droppables
-	[].slice.call(document.querySelectorAll('#my-drop-area .drop-area__item'))
-			.forEach(function(el) {
-				droppableArr.push(new Droppable(el, {
-					onDrop : function(instance, draggableEl) {
-						// show checkmark inside the droppabe element
-						classie.add(instance.el, 'drop-feedback');
-						clearTimeout(instance.checkmarkTimeout);
-						instance.checkmarkTimeout = setTimeout(function() {
-//							classie.remove(instance.el,'drop-feedback');
-						}, 800);
-						// ...
-					}
-				}));
-			});
-
-	// initialize draggable(s)
-	[].slice.call(document.querySelectorAll('#grid .grid__item')).forEach(
-			function(el) {
-				new Draggable(el, droppableArr, {
-					draggabilly : {
-						containment : document.body
-					},
-					onStart : function() {
-						// add class 'drag-active' to body
-						classie.add(body, 'drag-active');
-						// clear timeout: dropAreaTimeout (toggle drop area)
-//						clearTimeout(dropAreaTimeout);
-						// show dropArea
-//						 classie.add(dropArea, 'show');
-					},
-					onEnd : function(wasDropped) {
-						inputArea = document.getElementById('two');
-						questionaryArea = document.getElementById('questionary-area');
-						
-						var afterDropFn = function() {
-							// show corresponding questionary
-							classie.add(questionaryArea, 'show');
-							classie.add(inputArea, 'show');
-							// hide dropArea
-							// classie.remove(dropArea,'show');
-							// remove class 'drag-active' from body
-//							$("#two").slideDown(2000);
-							classie.remove(body, 'drag-active');
-						};
-
-						if (!wasDropped) {
-							afterDropFn();
-						} else {
-							// after some time hide drop area and remove class 'drag-active' from body
-							clearTimeout(dropAreaTimeout);
-							dropAreaTimeout = setTimeout(afterDropFn, 400);
-						}
-					}
-				});
-			});
+	
+	/* making every category a draggable object */
+	var draggables = document.querySelectorAll('#grid div');
+	for (var i = 0; i < draggables.length; i++) {
+		$(draggables[i]).draggable({
+			containment: '#categories',
+			revert : true,
+		});
+	}
+	
+	/* creating the droppable place holders for the categories*/
+//	var droppables = document.querySelectorAll('#my-drop-area div');
+//	for (var i = 0; i < droppables.length ; i++) {
+//		$(droppables[i]).droppable( {
+//			accept: '#grid div',
+//			hoverClass: 'highlight',
+//		    drop: handleDrop
+//		});
+//	}
+	
+	var availableSlot = [true,true,true,true,true,true,true,true,true];
+	
+	/* Define Droppable area*/
+	var droppableArea = document.querySelector('#my-drop-area');
+	$(droppableArea).droppable( {
+		accept: '#grid div',
+		hoverClass: 'highlight',
+	    drop: handleDrop
+	});
+	
+	function handleDrop( event, ui ) {
+		var nextAvailable = getNextAvailable();
+		ui.draggable.position( { of: $(nextAvailable), my: 'center', at: 'center' } );
+		ui.draggable.draggable( 'option', 'revert', false );
+		ui.draggable.addClass('grid__item-reduced');
+		var question = document.getElementById($(ui.draggable).attr("id")+"-question");
+		$(question).removeClass("invisible");
+		$("#questionary-area").addClass("show");
+		ui.draggable.draggable( 'disable' );
+	}
+	
+	function getNextAvailable() {
+		var slotArray = document.querySelectorAll('#my-drop-area div');
+		for (var i=0; i < availableSlot.length; i++) {
+			if (availableSlot[i]) {
+				availableSlot[i]=false;
+				return slotArray[i];
+			}
+		}
+		return null;
+	}
+	
 };
