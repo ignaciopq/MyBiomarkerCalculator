@@ -177,7 +177,7 @@
 	border-width: 8pt;	
 	border-radius: 10px;
 	padding: 2em;
-	margin-left: 325px;
+/* 	margin-left: 325px; */
 	
 }
 
@@ -214,9 +214,32 @@
 	margin-bottom: 0px;
 }
 
+article, #third-column, aside {
+	float:left;
+}
+
+article {
+	padding-left: 10em;
+	padding-right: 10em;
+}
+
+#third-column {
+	padding: 8em;
+}
+
+#calculate-button {
+	opacity: 0.5;
+}
+
+#calculate-button:hover {
+	opacity: 1;
+	-webkit-transform: scale3d(1.2,1.2,1.1);
+	transform: scale3d(1.2,1.2,1.1);
+	cursor: pointer;
+}
+
 aside {
 	width: 14em;
-	float: left;
 	padding: 0em;
 	padding-bottom: 1em;
 	border-style: solid;
