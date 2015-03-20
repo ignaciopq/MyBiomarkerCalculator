@@ -1,10 +1,12 @@
 /* Redefinition Block  */
 /* banner background picture redefinition */
 #banner {
-	background: url("../images/pic07.jpg");
+/* 	background: url("../images/pic07.jpg"); */
+	background: url("../images/health_banner_bn.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	text-shadow: 5px 5px 20px #000000;
 }
 
 /* Redifine icon border color */
