@@ -24,6 +24,9 @@ window.onload = function() {
 		currentDraggable = null;
 	});
 	
+	$("#calculate-button").click(function() {
+		window.location = "../SlidingShow/index.html";
+	});
 	/* Return draggable to its initial position*/
 	function returnDraggable() {
 		var origin = document.getElementById($(currentDraggable).attr("id")+"-origin");
