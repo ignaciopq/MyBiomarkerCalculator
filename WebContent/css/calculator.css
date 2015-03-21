@@ -7,6 +7,8 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	text-shadow: 5px 5px 20px #000000;
+/* 	padding-top: 2em; */
+	
 }
 
 /* Redifine icon border color */
@@ -226,7 +228,8 @@ article {
 }
 
 #third-column {
-	padding: 8em;
+	padding: 6em;
+	padding-top: 8em;
 }
 
 #calculate-button {
@@ -319,4 +322,8 @@ aside {
 .slide {
 	max-height: 400px;
 	max-width: 400px;
+}
+
+#ContinueButton {
+	margin: 1em;
 }
