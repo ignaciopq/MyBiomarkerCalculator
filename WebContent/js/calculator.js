@@ -15,8 +15,13 @@ window.onload = function() {
 		for (var i = 0; i < questions.length; i++) {
 			$(questions[i]).addClass("invisible");
 		}
-		
 		returnDraggable();
+	});
+	
+	$("#SaveQuestionButton").click(function() {
+		questionaryArea = document.getElementById('questionary-area');
+		$(questionaryArea).removeClass('show');
+		currentDraggable = null;
 	});
 	
 	/* Return draggable to its initial position*/
@@ -68,7 +73,8 @@ window.onload = function() {
 	});
 	
 	/* making every category a draggable object */
-	var draggables = document.querySelectorAll('#grid div');
+	enableDraggable();
+	var draggables = document.querySelectorAll('#grid .grid__item');
 	for (var i = 0; i < draggables.length; i++) {
 		$(draggables[i]).draggable({
 			containment: '#categories',
@@ -85,6 +91,8 @@ window.onload = function() {
 	});
 	
 	function handleDrop( event, ui ) {
+		if (currentDraggable != null)
+			return;
 		var nextAvailable = getNextAvailable();
 		ui.draggable.position( { of: $(nextAvailable), my: 'center', at: 'center' } );
 		ui.draggable.draggable( 'option', 'revert', false );
@@ -106,5 +114,22 @@ window.onload = function() {
 		}
 		return null;
 	}
-	slider();
+	
+	function enableDraggable() {
+		var draggables = document.querySelectorAll('#grid .grid__item');
+		for (var i = 0; i < draggables.length; i++) {
+			$(draggables[i]).draggable({
+				containment: '#categories',
+				revert : true,
+			});
+			$(draggables[i]).draggable( 'enable' );
+		}
+	}
+	
+	function disableDraggable() {
+		var draggables = document.querySelectorAll('#grid .grid__item');
+		for (var i = 0; i < draggables.length; i++) {
+			$(draggables[i]).draggable( 'disable' );
+		}
+	}
 };
