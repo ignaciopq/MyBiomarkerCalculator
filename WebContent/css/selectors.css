@@ -46,7 +46,6 @@
 	background: url("../images/pic05.jpg");
 }
 .dropdown:after{
-  content:"▾";
   font-size: 18px;
   position: absolute;
   right:20px;

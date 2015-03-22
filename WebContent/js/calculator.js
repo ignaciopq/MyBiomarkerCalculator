@@ -94,7 +94,7 @@ window.onload = function() {
 	}
 	
 	function removeQuestions() {
-		var questions = document.querySelectorAll('#questionary-area > div');
+		var questions = document.querySelectorAll('#questionary-questions > div');
 		for (var i = 0; i < questions.length; i++) {
 			$(questions[i]).addClass("invisible");
 		}
