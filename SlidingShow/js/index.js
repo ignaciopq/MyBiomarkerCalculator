@@ -1,6 +1,5 @@
 $(document).ready(gen_charts);
 function gen_charts() {
-  alert("function called");
   var bubbleChart = new d3.svg.BubbleChart({
     supportResponsive: true,
     //container: => use @default

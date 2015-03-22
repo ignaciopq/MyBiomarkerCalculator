@@ -26,8 +26,8 @@
 		};
 
 		function showCharts(){
-			//alert("there are "+ icons.length.toString() +"icons");
-			$.getScript("js/index.js", gen_charts);
+			alert("more work will be done to show charts.");
+			//$.getScript("js/index.js", gen_charts);
    		}
 
 

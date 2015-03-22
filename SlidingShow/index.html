@@ -26,6 +26,9 @@
   		<script src="http://phuonghuynh.github.io/js/bower_components/microplugin/src/microplugin.js"></script>
  		<script src="http://phuonghuynh.github.io/js/bower_components/bubble-chart/src/bubble-chart.js"></script>
   		<script src="http://phuonghuynh.github.io/js/bower_components/bubble-chart/src/plugins/lines/lines.js"></script>
+
+  		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+		<script>google.load("visualization", "1", {packages:["gauge","corechart","bar","motionchart"]});</script>
 	</head>
 	<body>
 		<div id="vs-container" class="vs-container">
@@ -91,7 +94,7 @@
 							</div>
 						</aside>
 						<article>
-							<div class = "bubbleChart"><div>
+							<div id = "chart"><div>
 						</article>
 						</div>
 					</div>
@@ -317,7 +320,32 @@
 		<script src="js/classie.js"></script>
 		<script src="js/hammer.min.js"></script>
 		<script src="js/main.js"></script>
-		<script src="js/index.js"></script>
-		<script src="js/central-click.js"></script>
+		<!--<script src="js/index.js"></script>
+		<script src="js/central-click.js"></script>-->
+		<script>
+			function createMotionChartForIncome() {
+        	var data = new google.visualization.DataTable();
+        	data.addColumn('string', 'Income');
+        	data.addColumn('number', 'Year');
+        	data.addColumn('number', 'Chemical Value');
+        
+        	data.addRows([
+          		['Above $5000',   2012,10],
+          		['Above $8000', 2012,20],
+          		['Above $10000', 2012,45],
+          		['Above $12000',  2012,25],
+          		['Above $50000', 2012,80],
+          		['Above $100000',2012,31]
+        	]);
+
+        	var chart = new google.visualization.MotionChart(document.getElementById('chart'));
+        	var options = {};
+       
+        	options['width'] = 600;
+        	options['height'] = 400;
+        	chart.draw(data, options);
+      }
+      createMotionChartForIncome();
+		</script>
 	</body>
 </html>
