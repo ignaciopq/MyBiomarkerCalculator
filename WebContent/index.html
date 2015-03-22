@@ -16,6 +16,7 @@
 <link rel="stylesheet" href="css/base/style-xlarge.css" />
 <link rel="stylesheet" href="css/base/icons.css" />
 <link rel="stylesheet" href="css/calculator.css" />
+<link rel="stylesheet" href="css/selectors.css" />
 </head>
 
 <body class="landing">
@@ -133,7 +134,19 @@
 	<div id="questionary-area" class="questionary-area">
 		<div id="age-question" class="questionary__item invisible">
 			<div class="question">How old are you?</div>
-			<input type="text" class="answer" />
+			<div class="dropholder">
+			  <p>Select</p>
+			  <div class="dropdown">
+			    <p>Age</p>
+			  </div>
+			  <ul class="menu">
+			    <li>6 years or less </li>
+			    <li>More than 6 and less than 15 </li>
+			    <li>More than 15 and less than 30</li>
+			    <li>More than 30 and less than 60</li>
+			    <li>More than 60</li>
+			  </ul>
+			</div>
 		</div>
 		<div id="country-question" class="questionary__item invisible">
 			<div class="question">Where were you born?</div>

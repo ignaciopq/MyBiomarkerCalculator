@@ -73,6 +73,16 @@ window.onload = function() {
 	    drop: handleDrop
 	});
 	
+	$(".dropdown").click(function(){
+	    $(".menu").toggleClass("showMenu");
+	      $(".menu > li").click(function(){
+	        $(".dropdown > p").html($(this).html());
+	          $(".menu").removeClass("showMenu");
+	      });
+	  });
+	
+	/* Function definitions */
+	
 	function reset() {
 		enableDraggable();
 		releaseAllSlot();
@@ -83,7 +93,6 @@ window.onload = function() {
 		currentDraggable = null;
 	}
 	
-	/* Function definitions */
 	function removeQuestions() {
 		var questions = document.querySelectorAll('#questionary-area > div');
 		for (var i = 0; i < questions.length; i++) {
