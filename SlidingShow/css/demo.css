@@ -13,7 +13,8 @@
 body {
 	font-family: 'Lato', Arial, sans-serif;
 	color: #fff;
-	background: #e74c3c;
+	/*background: #e74c3c;*/
+	background-image: url(../images/pic06.jpg);
 }
 
 /* To Navigation Style */

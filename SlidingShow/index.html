@@ -1,5 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
+
+  <style>
+    .bubbleChart {
+      min-width: 100px;
+      max-width: 900px;
+      height: 900px;
+      margin: 0 auto;
+    }
+    .bubbleChart svg{
+      background:;
+    }
+  </style>
+
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
@@ -8,57 +21,71 @@
 		<link rel="stylesheet" type="text/css" href="css/demo.css" />
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
 		<script src="js/modernizr.custom.js"></script>
+
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600,200italic,600italic&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+
+  		<script src="http://phuonghuynh.github.io/js/bower_components/jquery/dist/jquery.min.js"></script>
+  		<script src="http://phuonghuynh.github.io/js/bower_components/d3/d3.min.js"></script>
+  		<script src="http://phuonghuynh.github.io/js/bower_components/d3-transform/src/d3-transform.js"></script>
+  		<script src="http://phuonghuynh.github.io/js/bower_components/cafej/src/extarray.js"></script>
+  		<script src="http://phuonghuynh.github.io/js/bower_components/cafej/src/misc.js"></script>
+  		<script src="http://phuonghuynh.github.io/js/bower_components/cafej/src/micro-observer.js"></script>
+  		<script src="http://phuonghuynh.github.io/js/bower_components/microplugin/src/microplugin.js"></script>
+ 		<script src="http://phuonghuynh.github.io/js/bower_components/bubble-chart/src/bubble-chart.js"></script>
+  		<script src="http://phuonghuynh.github.io/js/bower_components/bubble-chart/src/plugins/lines/lines.js"></script>
 	</head>
 	<body>
 		<div id="vs-container" class="vs-container">
 			<header class="vs-header">
-				<h1>Sliding Triple View Layout <span>with Visible Adjoining Sections</span></h1>
+				<h1>Data Sets analysis results</h1>
 				<ul class="vs-nav">
-					<li><a href="#section-1">Section 1</a></li>
-					<li><a href="#section-2">Section 2</a></li>
-					<li><a href="#section-3">Section 3</a></li>
-					<li><a href="#section-4">Section 4</a></li>
-					<li><a href="#section-5">Section 5</a></li>
+					<li><a href="#section-1">Chemical 1</a></li>
+					<li><a href="#section-2">Chemical 2</a></li>
+					<li><a href="#section-3">Chemical 3</a></li>
+					<li><a href="#section-4">Chemical 4</a></li>
+					<li><a href="#section-5">Chemical 5</a></li>
 				</ul>
 			</header>
 			<div class="vs-wrapper">
 				<section id="section-1">
 					<div class="vs-content">
-						<h2>header</h2>
+						<h2>Title</h2>
 						<div class="col">
-							<p>First</p>
+							<p>charts goes here!!!</p>
+							<div class = "bubbleChart"><div>
 						</div>
 					</div>
 				</section>
 				<section id="section-2">
 					<div class="vs-content">
-						<h2>header</h2>
+						<h2>Title</h2>
 						<div class="col">
-							<p>second</p>
+							<p>charts goes here!!!</p>
 						</div>
 					</div>
 				</section>
 				<section id="section-3">
 					<div class="vs-content">
-						<h2>header</h2>
+						<h2>Title</h2>
 						<div class="col">
-							<p>thrid</p>
+							<p>charts goes here!!!</p>
 						</div>
 					</div>
 				</section>
 				<section id="section-4">
 					<div class="vs-content">
-						<h2>header</h2>
+						<h2>Title</h2>
 						<div class="col">
-							<p>fourthe</p>
+							<p>charts goes here!!!</p>
 						</div>
 					</div>
 				</section>
 				<section id="section-5">
 					<div class="vs-content">
-						<h2>header</h2>
+						<h2>Titile</h2>
 						<div class="col">
-							<p>fifth</p>
+							<p>charts goes here!!!</p>
 						</div>
 					</div>
 				</section>
@@ -67,5 +94,7 @@
 		<script src="js/classie.js"></script>
 		<script src="js/hammer.min.js"></script>
 		<script src="js/main.js"></script>
+		<script src="js/index.js"></script>
+		<script src="js/central-click.js"></script>
 	</body>
 </html>
