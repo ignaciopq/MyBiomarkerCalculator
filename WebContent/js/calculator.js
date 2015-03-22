@@ -11,38 +11,25 @@ window.onload = function() {
 		questionaryArea = document.getElementById('questionary-area');
 		$(questionaryArea).removeClass('show');
 		/* remove all questions from question area*/
-		var questions = document.querySelectorAll('#questionary-area > div');
-		for (var i = 0; i < questions.length; i++) {
-			$(questions[i]).addClass("invisible");
-		}
+		removeQuestions();
 		returnDraggable();
 	});
 	
 	$("#SaveQuestionButton").click(function() {
 		questionaryArea = document.getElementById('questionary-area');
 		$(questionaryArea).removeClass('show');
+		takeNextAvailable();
+		removeQuestions();
 		currentDraggable = null;
 	});
 	
-	/* Return draggable to its initial position*/
-	function returnDraggable() {
-		var origin = document.getElementById($(currentDraggable).attr("id")+"-origin");
-		$(currentDraggable).draggable( 'enable' );
-		$(currentDraggable).draggable( 'option', 'revert', true );
-		$(currentDraggable).removeClass('grid__item-reduced');
-		$(currentDraggable).position( { of: $(origin), my: 'center', at: 'center' } );
-		releaseSlot();
-		currentDraggable = null;
-	}
+	$("#calculate-button").click(function() {
+		window.location = "../SlidingShow/index.html";
+	});
 	
-	/* Release one slot */
-	function releaseSlot() {
-		for (var i= availableSlot.length-1; i >=0 ; i--) {
-			if (!availableSlot[i]) {
-				availableSlot[i]=true;
-			}
-		}
-	}
+	$("#reset-button").click(function() {
+		reset();
+	});
 	
 	/* Button for displaying categories section */
 	$("#ContinueButton").click(function() {
@@ -60,7 +47,7 @@ window.onload = function() {
 	
 	$("#TopButton").click(function() {
 		// display section smoothly
-		
+		reset();
 		
 		$( "#categories" ).slideUp( 1000, function() {
 			$("#banner").slideDown(1000);
@@ -74,13 +61,6 @@ window.onload = function() {
 	
 	/* making every category a draggable object */
 	enableDraggable();
-	var draggables = document.querySelectorAll('#grid .grid__item');
-	for (var i = 0; i < draggables.length; i++) {
-		$(draggables[i]).draggable({
-			containment: '#categories',
-			revert : true,
-		});
-	}
 	
 	/* Define Droppable area*/
 	var droppableArea = document.querySelector('#my-drop-area');
@@ -89,6 +69,51 @@ window.onload = function() {
 		hoverClass: 'highlight',
 	    drop: handleDrop
 	});
+	
+	function reset() {
+		enableDraggable();
+		releaseAllSlot();
+		returnAllDraggables();
+		$(questionaryArea = document.getElementById('questionary-area')).removeClass('show');
+		/* remove all questions from question area*/
+		removeQuestions();
+		currentDraggable = null;
+	}
+	
+	/* Function definitions */
+	function removeQuestions() {
+		var questions = document.querySelectorAll('#questionary-area > div');
+		for (var i = 0; i < questions.length; i++) {
+			$(questions[i]).addClass("invisible");
+		}
+	}
+	
+	/* Return currentDraggable to its initial position*/
+	function returnDraggable() {
+		var origin = document.getElementById($(currentDraggable).attr("id")+"-origin");
+		$(currentDraggable).draggable( 'enable' );
+		$(currentDraggable).draggable( 'option', 'revert', true );
+		$(currentDraggable).removeClass('grid__item-reduced');
+		$(currentDraggable).position( { of: $(origin), my: 'center', at: 'center' } );
+		currentDraggable = null;
+	}
+	
+	/* Return every draggable to its initial position */
+	function returnAllDraggables() {
+		var draggables = document.querySelectorAll('#grid .grid__item');
+		for (var i=0; i < draggables.length ; i++) {
+			var origin = document.getElementById($(draggables[i]).attr("id")+"-origin");
+			$(draggables[i]).removeClass('grid__item-reduced');
+			$(draggables[i]).position( { of: $(origin), my: 'center', at: 'center' } );
+		}
+	}
+	
+	/* Release all slots */
+	function releaseAllSlot() {
+		for (var i= 0; i < availableSlot.length ; i++) {
+			availableSlot[i]=true;
+		}
+	}
 	
 	function handleDrop( event, ui ) {
 		if (currentDraggable != null)
@@ -108,11 +133,20 @@ window.onload = function() {
 		var slotArray = document.querySelectorAll('#my-drop-area div');
 		for (var i=0; i < availableSlot.length; i++) {
 			if (availableSlot[i]) {
-				availableSlot[i]=false;
 				return slotArray[i];
 			}
 		}
 		return null;
+	}
+	
+	function takeNextAvailable() {
+		var slotArray = document.querySelectorAll('#my-drop-area div');
+		for (var i=0; i < availableSlot.length; i++) {
+			if (availableSlot[i]) {
+				availableSlot[i]=false;
+				return;
+			}
+		}
 	}
 	
 	function enableDraggable() {
