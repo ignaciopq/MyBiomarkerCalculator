@@ -19,6 +19,18 @@
 
 	function init() {
 
+		var icons = document.getElementsByClassName("grid-frame");
+		var len = icons.length;
+		for (var i = 0; i < len; i++) {
+			icons[i].addEventListener("click", showCharts);
+		};
+
+		function showCharts(){
+			//alert("there are "+ icons.length.toString() +"icons");
+			$.getScript("js/index.js", gen_charts);
+   		}
+
+
 		var container = document.getElementById( 'vs-container' ),
 			wrapper = container.querySelector( 'div.vs-wrapper' ),
 			sections = Array.prototype.slice.call( wrapper.querySelectorAll( 'section' ) ),
