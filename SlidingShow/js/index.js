@@ -1,4 +1,6 @@
-$(document).ready(function () {
+$(document).ready(gen_charts);
+function gen_charts() {
+  alert("function called");
   var bubbleChart = new d3.svg.BubbleChart({
     supportResponsive: true,
     //container: => use @default
@@ -13,7 +15,7 @@ $(document).ready(function () {
     //circleColor: use @default
     
     data: {
-	  
+    
       items: [
               {text: "Bisphenol A(ng/mL)", count: ".4"},
               {text: "lead(ug/dL)", count: "11"},
@@ -95,4 +97,4 @@ $(document).ready(function () {
         }
       }]
   });
-});
+}
