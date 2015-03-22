@@ -13,6 +13,7 @@ window.onload = function() {
 		/* remove all questions from question area*/
 		removeQuestions();
 		returnDraggable();
+		$('*', '#categories').fadeTo("slow", 1);
 	});
 	
 	$("#SaveQuestionButton").click(function() {
@@ -21,6 +22,7 @@ window.onload = function() {
 		takeNextAvailable();
 		removeQuestions();
 		currentDraggable = null;
+		$('*', '#categories').fadeTo("slow", 1);
 	});
 	
 	$("#calculate-button").click(function() {
@@ -47,6 +49,7 @@ window.onload = function() {
 	
 	$("#TopButton").click(function() {
 		// display section smoothly
+		$('*', '#categories').fadeTo("slow", 1);
 		reset();
 		
 		$( "#categories" ).slideUp( 1000, function() {
@@ -127,6 +130,7 @@ window.onload = function() {
 		$("#questionary-area").addClass("show");
 		ui.draggable.draggable( 'disable' );
 		currentDraggable = ui.draggable;
+		$('*', '#categories').fadeTo("slow", 0.5);
 	}
 	
 	function getNextAvailable() {
