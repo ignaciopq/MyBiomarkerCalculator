@@ -197,8 +197,8 @@ article, #third-column, aside {
 }
 
 article {
-	margin-left: 6em;
-	margin-right: 6em;
+	margin-left: 3em;
+	margin-right: 3em;
 }
 
 article > p {
@@ -229,7 +229,7 @@ aside {
 	width: 14em;
 	padding: 0em;
 	padding-bottom: 1em;
-	border-style: solid;
+	border-right-style: solid;
 	border-width: 2px;
 	background: url("../images/pic07.jpg");
 	border-color:  #453242;
@@ -320,4 +320,25 @@ input[type="text"]:focus {
 #questionary-buttons {
 	text-align: center;
 	
+}
+
+#footer {
+	padding-bottom: 2em;
+	padding-top: 2em;
+}
+
+#footer p {
+	color: white;
+}
+
+.copyright {
+	color: white;
+}
+
+#header nav>ul>li a,#header >h1>a  {
+	color: #E6E6E6;
+}
+
+#header nav>ul>li a:hover, #header >h1>a:hover {
+	color: #ffffff;
 }
