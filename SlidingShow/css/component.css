@@ -1,3 +1,7 @@
+@charset "UTF-8";
+@import url(font-awesome.min.css);
+@import url("http://fonts.googleapis.com/css?family=Lato:300,400");
+
 *, *:after, *::before {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -44,7 +48,7 @@ a:visited{
 	padding: 0 0 0.6em 0.1em;
 	font-size: 60%;
 	font-weight: 400;
-	color: #893027;
+	color: #E6E6E6;
 }
 
 .vs-nav {
@@ -79,16 +83,20 @@ a:visited{
 	margin: 0 10px;
 	padding: 10px 0;
 	outline: none;
-	border-top: 2px solid #893027;
-	border-bottom: 2px solid #893027;
-	color: #893027;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	color: #fff;
 	text-decoration: none;
-	text-transform: uppercase;
+/* 	text-transform: uppercase; */
 	letter-spacing: 2px;
 	font-weight: 700;
-	font-size: 1.5em;
 	-webkit-transition: border-color 0.3s, color 0.3s;
 	transition: border-color 0.3s, color 0.3s;
+	opacity: 0.5;
+	font-family: "Lato", Helvetica, sans-serif;
+	font-size: 15pt;
+	font-weight: 300;
+	line-height: 1.65em;
 }
 
 .vs-nav li a:hover,
@@ -98,12 +106,13 @@ a:visited{
 .vs-container.vs-move-right .vs-nav-left a {
 	border-color: #fff;
 	color: #fff;
+	opacity: 1;
 }
 
 .vs-container.vs-move-left .vs-nav-current a,
 .vs-container.vs-move-right .vs-nav-current a {
-	border-color: #893027;
-	color: #893027;
+	border-color: #E6E6E6;
+	color: #E6E6E6;
 }
 
 .vs-triplelayout .vs-nav .vs-nav-left,
@@ -373,3 +382,38 @@ a:visited{
 	}
 }
 
+#chart {
+	float: left;
+}
+ 
+#bisphenol-desc {
+	float: left;
+	width: 30%;
+	font-family: "Lato", Helvetica, sans-serif;
+	font-size: 10pt;
+	line-height: 1.65em;
+	color: white;
+	padding-left: 1em;
+}
+
+article {
+	width: 70%;
+}
+
+.vs-header > h1 {
+	padding: 1em;
+}
+
+aside {
+	width: 14em;
+	padding: 0em;
+	padding-bottom: 1em;
+	border-right-style: solid;
+	border-width: 2px;
+	background: url("../../WebContent/images/pic07.jpg");
+	border-color:  #453242;
+}
+
+#category-subtitle {
+	text-align: center;
+}
