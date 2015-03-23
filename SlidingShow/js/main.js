@@ -19,16 +19,6 @@
 
 	function init() {
 
-		var icons = document.getElementsByClassName("grid-frame");
-		var len = icons.length;
-		for (var i = 0; i < len; i++) {
-			icons[i].addEventListener("click", showCharts);
-		};
-
-		function showCharts(){
-			alert("more work will be done to show charts.");
-			//$.getScript("js/index.js", gen_charts);
-   		}
 
 
 		var container = document.getElementById( 'vs-container' ),
@@ -45,6 +35,23 @@
 			},
 			transEndEventName = transEndEventNames[Modernizr.prefixed( 'transition' )],
 			eventtype = mobilecheck() ? 'touchstart' : 'click';
+
+		var icons = document.getElementsByClassName("grid-frame");
+		var len = icons.length;
+		for (var i = 0; i < len; i++) {
+			icons[i].addEventListener("click", showCharts);
+		};
+
+		function showCharts(){
+			//alert(sections[current].id);
+			var curSection = document.getElementById(sections[current].id);
+			var vscontait = curSection.querySelector('div.vs-content');
+			var content = vscontait.querySelector('div.container');
+			var childs = content.children;
+			//alert(childs[1].children[0].id);
+			//var charId = childs[1].children[0].id;
+			$.getScript("js/index.js", createMotionChartForIncome(childs[1].children[0]));
+   		}
 
 		// add navigation elements
 		if( sectionsCount >= 3 && Modernizr.csstransforms3d ) {
