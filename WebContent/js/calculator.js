@@ -34,18 +34,34 @@ window.onload = function() {
 	});
 	
 	/* Button for displaying categories section */
-	$("#ContinueButton").click(function() {
+	$("#CalculateButton").click(function() {
 		// display section smoothly
 		
-		$( "#banner" ).slideUp( 1000, function() {
-			$("#categories").slideDown(1000);
-		  });
-
+//		$( "#banner" ).slideUp( 1000, function() {
+//			$("#categories").slideDown(1000);
+//		  });
+		$("#categories").slideDown(2000);
+		
 		// Scroll down to section 
 		$('html, body').animate({
 			scrollTop : $("#categories").offset().top
 		}, 1000);
 	});
+	
+	$("#ContinueButton").click(function () {
+		// Scroll down to section 
+		$('html, body').animate({
+			scrollTop : $("#second-section").offset().top
+		}, 1000);
+	});
+	
+	/* Bind buttons to go to bottom section */
+	$("#GoLastButton").click(goBottom);
+	$("#StartCalculationButton").click(goBottom);
+	
+	/* Bind buttons to go to top section */
+	$("#BackTopButton").click(goTop);
+	$("#BackButton").click(goTop);
 	
 	$("#TopButton").click(function() {
 		// display section smoothly
@@ -83,6 +99,21 @@ window.onload = function() {
 	
 	/* Function definitions */
 	
+	/* Scrolling functions*/
+	function goBottom() {
+		// Scroll down to section 
+		$('html, body').animate({
+			scrollTop : $("#third-section").offset().top
+		}, 1000);
+	}
+	function goTop() {
+		// Scroll down to section 
+		$('html, body').animate({
+			scrollTop : $("#first-section").offset().top
+		}, 1000);
+	}
+	
+	/* General purpose functions*/
 	function reset() {
 		enableDraggable();
 		releaseAllSlot();

@@ -16,35 +16,88 @@
 <link rel="stylesheet" href="css/base/style-xlarge.css" />
 <link rel="stylesheet" href="css/base/icons.css" />
 <link rel="stylesheet" href="css/calculator.css" />
-<link rel="stylesheet" href="css/selectors.css" />
 </head>
 
 <body class="landing">
-
-	
-
 	<!-- Banner -->
-	<section id="banner">
+	<section id="first-section">
 		<!-- Header -->
-		<header id="header">
+		<header>
 			<h1><a href="index.html">Home</a></h1>
 			<nav id="nav">
 				<ul>
-					<li><a href="generic.html">NHANES</a></li>
-					<li><a href="elements.html">About</a></li>
+					<li><a href="http://www.cdc.gov/nchs/nhanes.htm">NHANES</a></li>
 				</ul>
 			</nav>
 		</header>
 		<h2>Welcome to My Biomarkers Calculator</h2>
 		
-		<img src="images/Calculator2.gif" alt="Calculator"	class="icon rounded big">
-		<p>My Biomarkers Calculator is an interactive tool that gives you
-			an estimate of different biomarkers in your body according to your
-			personal characteristics based on data obtained by NHANES survey.</p>
-		<a href="JavaScript:void(0)" class="button big" id="ContinueButton">Continue</a>
+		<div>
+			<p>My Biomarkers Calculator is an interactive tool that gives you an estimate of different chemical substances 
+			found in your body according to data obtained from NHANES survey.</p>
+			
+			<a href="JavaScript:void(0)" class="button big" id="ContinueButton">Learn More</a>
+			<a href="JavaScript:void(0)" class="button big" id="GoLastButton">Start Calculation</a>
+		</div>
+		
+	</section>
+	
+	<section id="second-section">
+		<p> In particular, My Biomarkers Calculator provides information regarding the following toxicants filtered by a number of different factors: </p>
+		<div id="list-container">
+			<div class="column-list">
+				<ul>
+					<li><strong>Toxicants:</strong></li>
+					<li>Bisphenol A</li>
+					<li>Lead</li>
+					<li>Mercury</li>
+					<li>Cotinine</li>
+					<li>DDE</li>
+					<li>Polychlorinated Biphenyls</li>
+					<li>PDE-47</li>
+					<li>Insesticides (Diethylthiophosphate)</li>
+					<li>Phthalates and Plasticizers</li>
+				</ul>
+			</div>
+			<div class="column-list">
+				<ul>
+					<li><strong>Categories:</strong></li>
+					<li>Age</li>
+					<li>Country</li>
+					<li>Gender</li>
+					<li>Income</li>
+					<li>Education</li>
+					<li>Smoking</li>
+					<li>Ethnicity</li>
+					<li>Diet</li>
+				</ul>
+			</div>
+		</div>
+		<a href="JavaScript:void(0)" class="button big" id="BackButton">Back to Top</a>
+		<a href="JavaScript:void(0)" class="button big" id="StartCalculationButton">Start Calculation</a>
+		
+	</section>
+	
+	<section id="third-section">
+		<p>Ok. Now you need to decide what to do.</p> 
+		<p>Do you want to <strong> Explore </strong>NHANES or <strong> Calculate</strong> a personalized estimation?</p>
+		<div id="button-container">		
+			<div class="button-column">
+				<div><img src="images/explore_icon_color.png" alt="Explore"	class="icon rounded big"></div>
+				<a href="explore.html" class="button big" id="ExploreButton">Explore</a>
+				<p>Click <strong>Explore</strong> if you are interested in knowing more about NHANES and how different factors such as age, country of birth, gender, income,
+				educational level, smoking, ethnicity and diet influence the amount of toxicants present in your body.</p> 
+			</div>
+			<div class="button-column">
+				<div><img src="images/Calculator2.gif" alt="Calculator"	class="icon rounded big"></div>
+				<a href="JavaScript:void(0)" class="button big" id="CalculateButton">Calculate</a>
+				<p>Click <strong>Calculate</strong> if you want to obtain a customized calculation of toxicants in your body.</p>
+			</div>
+		</div>
+		<a href="JavaScript:void(0)" class="button big" id="BackTopButton">Back to Top</a>
 	</section>
 
-	<!-- One -->
+<!-- 	categories selection -->
 	<section id="categories" class="wrapper style1 align-center invisible">
 		<header>
 			<div class="bar-element aside-top">
@@ -58,81 +111,10 @@
 			</div>
 		</header>
 		<div class="container">
-			<aside>
-				<div id="category-subtitle">Categories</div>
-				<div id="grid" class="grid">
-					<div id="age-origin" class="grid-frame">
-						<div id="age" class="grid__item">
-							<img src="images/age_icon_trans.png" alt="ageIcon" class="category-icon">Age
-						</div>
-					</div>
-					<div id="country-origin" class="grid-frame">
-						<div id="country" class="grid__item">
-							<img src="images/country_icon_trans.png" alt="countryIcon" class="category-icon">Country
-						</div>
-					</div>
-					<div id="gender-origin" class="grid-frame">
-						<div id="gender" class="grid__item">
-							<img src="images/gender_icon_trans.png" alt="genderIcon" class="category-icon">Gender
-						</div>
-					</div>
-					<div id="income-origin" class="grid-frame">
-						<div id="income" class="grid__item">
-							<img src="images/income_icon_trans.png" alt="incomeIcon" class="category-icon">Income
-						</div>
-					</div>
-					<div id="education-origin" class="grid-frame">
-						<div id="education" class="grid__item">
-							<img src="images/education_icon_trans.png" alt="educationIcon" class="category-icon">Education
-						</div>
-					</div>
-					<div id="smoking-origin" class="grid-frame">
-						<div id="smoking" class="grid__item">
-							<img src="images/smoking_icon_trans.png" alt="smokingIcon" class="category-icon">Smoking
-						</div>
-					</div>
-					<div id="race-origin" class="grid-frame">
-						<div id="race" class="grid__item">
-							<img src="images/race_icon_trans.png" alt="raceIcon" class="category-icon">Ethnicity
-						</div>
-					</div>
-					<div id="diet-origin" class="grid-frame">
-						<div id="diet" class="grid__item">
-							<img src="images/diet_icon_trans.png" alt="dietIcon" class="category-icon">Diet
-						</div>
-					</div>
-				</div>
-			</aside>
 			
 			<article>
-				<p >Drag and Drop Icons Into into the Selection Area and Answer the Questions About each Category</p>
-				<div id="my-drop-area" class="my-drop-area">
-						<div id="slot-0" class="drop-area__item"></div>
-						<div id="slot-1" class="drop-area__item"></div>
-						<div id="slot-2" class="drop-area__item"></div>
-						<div id="slot-3" class="drop-area__item"></div>
-						<div id="slot-4" class="drop-area__item"></div>
-						<div id="slot-5" class="drop-area__item"></div>
-						<div id="slot-6" class="drop-area__item"></div>
-						<div id="slot-7" class="drop-area__item"></div>
-						<div id="slot-8" class="drop-area__item"></div>
-				</div>
-			</article>
-			<div id="third-column">	
-				<div id="reset-button">
-					<img src="images/reset.jpg" alt="Reset"	class="icon rounded big">
-					<p> Reset</p>
-				</div>
-				<div id="calculate-button">
-					<img src="images/Calculator2.gif" alt="Calculator"	class="icon rounded big">
-					<p> Calculate</p>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<div id="questionary-area" class="questionary-area">
-		<div id="questionary-questions" class="questionary-questions">
+				<p >First, we need to ask you a few questions to help us with the estimation:</p>
+				<div id="questionary-questions" class="questionary-questions">
 			<div id="age-question" class="questionary__item invisible">
 				<div class="question">How old are you?</div>
 				<div class="dropholder">
@@ -182,11 +164,87 @@
 				<input type="text" class="answer" />
 			</div>
 		</div>
-		<div id="questionary-buttons" class="questionary-buttons">
-			<a href="JavaScript:void(0)" class="button alt"	id="SaveQuestionButton">Save</a>
-			<a href="JavaScript:void(0)" class="button alt" id="CancelQuestionButton">Cancel</a>
+<!-- 				<div id="my-drop-area" class="my-drop-area"> -->
+<!-- 						<div id="slot-0" class="drop-area__item"></div> -->
+<!-- 						<div id="slot-1" class="drop-area__item"></div> -->
+<!-- 						<div id="slot-2" class="drop-area__item"></div> -->
+<!-- 						<div id="slot-3" class="drop-area__item"></div> -->
+<!-- 						<div id="slot-4" class="drop-area__item"></div> -->
+<!-- 						<div id="slot-5" class="drop-area__item"></div> -->
+<!-- 						<div id="slot-6" class="drop-area__item"></div> -->
+<!-- 						<div id="slot-7" class="drop-area__item"></div> -->
+<!-- 						<div id="slot-8" class="drop-area__item"></div> -->
+<!-- 				</div> -->
+			</article>
+<!-- 			<div id="third-column">	 -->
+<!-- 				<div id="reset-button"> -->
+<!-- 					<img src="images/reset.jpg" alt="Reset"	class="icon rounded big"> -->
+<!-- 					<p> Reset</p> -->
+<!-- 				</div> -->
+<!-- 				<div id="calculate-button"> -->
+<!-- 					<img src="images/Calculator2.gif" alt="Calculator"	class="icon rounded big"> -->
+<!-- 					<p> Calculate</p> -->
+<!-- 				</div> -->
+<!-- 			</div> -->
 		</div>
-	</div>
+	</section>
+
+<!-- 	<div id="questionary-area" class="questionary-area"> -->
+<!-- 		<div id="questionary-questions" class="questionary-questions"> -->
+<!-- 			<div id="age-question" class="questionary__item invisible"> -->
+<!-- 				<div class="question">How old are you?</div> -->
+<!-- 				<div class="dropholder"> -->
+<!-- 				  <p>Select</p> -->
+<!-- 				  <div class="dropdown"> -->
+<!-- 				    <p>Age</p> -->
+<!-- 				  </div> -->
+<!-- 				  <ul class="menu"> -->
+<!-- 				    <li>6 years or less </li> -->
+<!-- 				    <li>More than 6 and less than 15 </li> -->
+<!-- 				    <li>More than 15 and less than 30</li> -->
+<!-- 				    <li>More than 30 and less than 60</li> -->
+<!-- 				    <li>More than 60</li> -->
+<!-- 				  </ul> -->
+<!-- 				</div> -->
+<!-- 			</div> -->
+<!-- 			<div id="country-question" class="questionary__item invisible"> -->
+<!-- 				<div class="question">Where were you born?</div> -->
+<!-- 				<input type="text" class="answer" /> -->
+<!-- 				<div class="question">How long have you lived in the US?</div> -->
+<!-- 				<input type="text" class="answer" /> -->
+<!-- 			</div> -->
+<!-- 			<div id="gender-question" class="questionary__item invisible"> -->
+<!-- 				<div class="question">Are you male of female?</div> -->
+<!-- 				<input type="text" class="answer" /> -->
+<!-- 			</div> -->
+<!-- 			<div id="income-question" class="questionary__item invisible"> -->
+<!-- 				<div class="question">What is your total house income?</div> -->
+<!-- 				<input type="text" class="answer" /> -->
+<!-- 			</div> -->
+<!-- 			<div id="education-question" class="questionary__item invisible"> -->
+<!-- 				<div class="question">What is your highest level of education?</div> -->
+<!-- 				<input type="text" class="answer" /> -->
+<!-- 			</div> -->
+<!-- 			<div id="smoking-question" class="questionary__item invisible"> -->
+<!-- 				<div class="question">Do you smoke?</div> -->
+<!-- 				<input type="text" class="answer" /> -->
+<!-- 			</div> -->
+<!-- 			<div id="race-question" class="questionary__item invisible"> -->
+<!-- 				<div class="question">What is your race/ethnicity?</div> -->
+<!-- 				<input type="text" class="answer" /> -->
+<!-- 			</div> -->
+<!-- 			<div id="diet-question" class="questionary__item invisible"> -->
+<!-- 				<div class="question">Do you eat fish?</div> -->
+<!-- 				<input type="text" class="answer" /> -->
+<!-- 				<div class="question">How often do you eat fish?</div> -->
+<!-- 				<input type="text" class="answer" /> -->
+<!-- 			</div> -->
+<!-- 		</div> -->
+<!-- 		<div id="questionary-buttons" class="questionary-buttons"> -->
+<!-- 			<a href="JavaScript:void(0)" class="button alt"	id="SaveQuestionButton">Save</a> -->
+<!-- 			<a href="JavaScript:void(0)" class="button alt" id="CancelQuestionButton">Cancel</a> -->
+<!-- 		</div> -->
+<!-- 	</div> -->
 
 
 	<!-- Footer -->
@@ -216,18 +274,19 @@
 				</section>
 				<section class="4u$ 12u$(medium) 12u$(small)">
 					<h3>Contact Us</h3>
-					<ul class="icons">
-						<li><a href="#" class="icon rounded fa-twitter"><span
-								class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon rounded fa-facebook"><span
-								class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon rounded fa-pinterest"><span
-								class="label">Pinterest</span></a></li>
-						<li><a href="#" class="icon rounded fa-google-plus"><span
-								class="label">Google+</span></a></li>
-						<li><a href="#" class="icon rounded fa-linkedin"><span
-								class="label">LinkedIn</span></a></li>
-					</ul>
+					<p>Send your questions to <strong>mybiocalc@groupsixsoftware.ca</strong></p>
+<!-- 					<ul class="icons"> -->
+<!-- 						<li><a href="#" class="icon rounded fa-twitter"><span -->
+<!-- 								class="label">Twitter</span></a></li> -->
+<!-- 						<li><a href="#" class="icon rounded fa-facebook"><span -->
+<!-- 								class="label">Facebook</span></a></li> -->
+<!-- 						<li><a href="#" class="icon rounded fa-pinterest"><span -->
+<!-- 								class="label">Pinterest</span></a></li> -->
+<!-- 						<li><a href="#" class="icon rounded fa-google-plus"><span -->
+<!-- 								class="label">Google+</span></a></li> -->
+<!-- 						<li><a href="#" class="icon rounded fa-linkedin"><span -->
+<!-- 								class="label">LinkedIn</span></a></li> -->
+<!-- 					</ul> -->
 <!-- 					<ul class="tabular"> -->
 <!-- 						<li> -->
 <!-- 							<h3>Address</h3> 1234 Somewhere Road<br> Nashville, TN 00000 -->

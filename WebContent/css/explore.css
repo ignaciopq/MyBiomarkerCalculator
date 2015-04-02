@@ -1,0 +1,56 @@
+#main {
+	background: url("../images/pic06.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 100vh;
+	overflow: hidden;
+}
+
+#main h2 {
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+section p {
+	margin: 2em;
+	text-align: justify;
+}
+
+#instructions {
+	font-size: 1.5em;
+}
+
+aside {
+	max-width: 15%;
+	padding: 0em;
+	background: url("../images/pic07.jpg");
+	float: left;
+}
+
+
+.aside-top {
+	width: 243px;
+}
+
+#chemicals-list {
+	padding-left: 15%;
+	background: url("../images/pic07.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#chart-area {
+/* 	width: 55%; */
+	float: left;
+	margin-top: 5%;
+	margin-left: 20%;
+}
+
+#chart-picture {
+	max-height: 650px;
+}
+
+.active {
+	background: #563f53;
+}

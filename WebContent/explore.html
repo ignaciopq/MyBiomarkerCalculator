@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Explore My Biomarkers Calculator</title>
+<link href="images/explore_icon_color.png" type="image/gif" rel="shortcut icon" />
+<script src="js/jquery-1.10.2.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/explore.js"></script>
+
+<link rel="stylesheet" href="css/base/skel.css" />
+<link rel="stylesheet" href="css/base/style.css" />
+<link rel="stylesheet" href="css/base/style-xlarge.css" />
+<link rel="stylesheet" href="css/base/icons.css" />
+<link rel="stylesheet" href="css/calculator.css" />
+<link rel="stylesheet" href="css/selectors.css" />
+<link rel="stylesheet" href="css/explore.css" />
+</head>
+<body>
+	<section id="main">
+		<!-- Header -->
+		<header>
+			<h1>
+				<a href="index.html">Home</a>
+			</h1>
+			<nav id="nav">
+				<ul>
+					<li><a href="http://www.cdc.gov/nchs/nhanes.htm">NHANES</a></li>
+				</ul>
+			</nav>
+		</header>
+		<h2>My Biomarkers Calculator Explorer</h2>
+		<div><img src="images/explore_icon_color.png" alt="Explore"	class="icon rounded big"></div>
+		<p>In this section you are allowed to explore NHANES data and
+			obtain chemical levels of different toxicants and filter them
+			according to different categories. For each category, you will see a chart that will allow you to
+			compare results for different people in that category. </p>
+		<p id="instructions">To display the chart, you need to click on one category on the
+			left side bar and one toxicant in the upper bar. For example, if you
+			click on "Age" and "Bisphenol A" you will obtain a bubble chart that
+			shows you the median value of this toxicant according to different age groups.</p>
+
+		<div id="button-panel">
+			<div id="chemicals-list" class="grid">
+				<div id="bisphenol" class="grid__item">
+					<img src="images/bpa_icon.png" alt="bpaIcon" class="category-icon">BPA
+				</div>
+				<div id="lead" class="grid__item">
+					<img src="images/lead_icon.png" alt="leadIcon"
+						class="category-icon">Lead
+				</div>
+				<div id="mercury" class="grid__item">
+					<img src="images/mercury_icon.png" alt="mercIcon"
+						class="category-icon">Mercury
+				</div>
+				<div id="cotinine" class="grid__item">
+					<img src="images/cotinine_icon.png" alt="cotinineIcon"
+						class="category-icon">Cotinine
+				</div>
+				<div id="dde" class="grid__item">
+					<img src="images/dde_icon.png" alt="ddeIcon"
+						class="category-icon">DDE
+				</div>
+				<div id="pcb" class="grid__item">
+					<img src="images/pcb_icon.png" alt="pcbIcon"
+						class="category-icon">PCB
+				</div>
+				<div id="pde" class="grid__item">
+					<img src="images/pde-47_icon.png" alt="pdeIcon"
+						class="category-icon">PDE-47
+				</div>
+				<div id="insesticides" class="grid__item">
+					<img src="images/insecticide_icon.png" alt="insestIcon"
+						class="category-icon">Insesticides
+				</div>
+				<div id="dehp" class="grid__item">
+					<img src="images/dehp_icon.png" alt="dehpIcon"
+						class="category-icon">DEHP
+				</div>
+			</div>
+			<aside>
+<!-- 				<div id="category-subtitle">Categories</div> -->
+				<div id="grid" class="grid">
+					<div id="age" class="grid__item">
+						<img src="images/age_icon_trans.png" alt="ageIcon"
+							class="category-icon">Age
+					</div>
+					<div id="country" class="grid__item">
+						<img src="images/country_icon_trans.png" alt="countryIcon"
+							class="category-icon">Country
+					</div>
+					<div id="gender" class="grid__item">
+						<img src="images/gender_icon_trans.png" alt="genderIcon"
+							class="category-icon">Gender
+					</div>
+					<div id="income" class="grid__item">
+						<img src="images/income_icon_trans.png" alt="incomeIcon"
+							class="category-icon">Income
+					</div>
+					<div id="education" class="grid__item">
+						<img src="images/education_icon_trans.png" alt="educationIcon"
+							class="category-icon">Education
+					</div>
+					<div id="smoking" class="grid__item">
+						<img src="images/smoking_icon_trans.png" alt="smokingIcon"
+							class="category-icon">Smoking
+					</div>
+					<div id="race" class="grid__item">
+						<img src="images/race_icon_trans.png" alt="raceIcon"
+							class="category-icon">Ethnicity
+					</div>
+					<div id="diet" class="grid__item">
+						<img src="images/diet_icon_trans.png" alt="dietIcon"
+							class="category-icon">Diet
+					</div>
+				</div>
+			</aside>
+		</div>
+		<div id="chart-area" class="invisible">
+			<div id="chart">
+				<img src="images/buble_chart.png" alt="Chart" id="chart-picture">
+			</div>
+		</div>
+	</section>
+	
+	<!-- Footer -->
+	<footer id="footer">
+		<div class="container">
+			<div class="row">
+				<section class="4u 6u(medium) 12u$(small)">
+					<h3>My Biomarkers Calculator</h3>
+					<p>My Biomarkers Calculator has been developed as part of CICS530 Final Course Project.</p>
+				</section>
+				<section class="4u 6u$(medium) 12u$(small)">
+					<h3>NHANES</h3>
+					<p>All the data used in this aplication is available online in NHANES website.</p>
+				</section>
+				<section class="4u$ 12u$(medium) 12u$(small)">
+					<h3>Contact Us</h3>
+					<p>Send your questions to <strong>mybiocalc@groupsixsoftware.ca</strong></p>
+<!-- 					<ul class="icons"> -->
+<!-- 						<li><a href="#" class="icon rounded fa-twitter"><span -->
+<!-- 								class="label">Twitter</span></a></li> -->
+<!-- 						<li><a href="#" class="icon rounded fa-facebook"><span -->
+<!-- 								class="label">Facebook</span></a></li> -->
+<!-- 						<li><a href="#" class="icon rounded fa-pinterest"><span -->
+<!-- 								class="label">Pinterest</span></a></li> -->
+<!-- 						<li><a href="#" class="icon rounded fa-google-plus"><span -->
+<!-- 								class="label">Google+</span></a></li> -->
+<!-- 						<li><a href="#" class="icon rounded fa-linkedin"><span -->
+<!-- 								class="label">LinkedIn</span></a></li> -->
+<!-- 					</ul> -->
+				</section>
+			</div>
+			<ul class="copyright">
+				<li>&copy; Untitled. All rights reserved.</li>
+				<li>Design: <a href="http://www.google.ca">Group 6</a></li>
+				<li>Images: <a href="http://www.ubc.ca">Group 6</a></li>
+			</ul>
+		</div>
+	</footer>
+</body>
+</html>
