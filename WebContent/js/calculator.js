@@ -4,47 +4,25 @@
  */
 window.onload = function() {
 	
-	var currentDraggable = null;
-	var availableSlot = [true,true,true,true,true,true,true,true,true];
-	
-	$("#CancelQuestionButton").click(function() {
-		questionaryArea = document.getElementById('questionary-area');
-		$(questionaryArea).removeClass('show');
-		/* remove all questions from question area*/
-		removeQuestions();
-		returnDraggable();
-		$('*', '#categories').fadeTo("slow", 1);
-	});
-	
-	$("#SaveQuestionButton").click(function() {
-		questionaryArea = document.getElementById('questionary-area');
-		$(questionaryArea).removeClass('show');
-		takeNextAvailable();
-		removeQuestions();
-		currentDraggable = null;
-		$('*', '#categories').fadeTo("slow", 1);
-	});
-	
-	$("#calculate-button").click(function() {
-		window.location = "../SlidingShow/index.html";
-	});
-	
-	$("#reset-button").click(function() {
-		reset();
-	});
+	/* variables with user input */
+	var age = null;
+	var country = null;
+	var gender = null;
+	var income = null;
+	var education = null;
+	var smoking = null;
+	var race = null;
+	var stayus = null;
 	
 	/* Button for displaying categories section */
 	$("#CalculateButton").click(function() {
 		// display section smoothly
 		
-//		$( "#banner" ).slideUp( 1000, function() {
-//			$("#categories").slideDown(1000);
-//		  });
-		$("#categories").slideDown(2000);
+		$("#questionary-section").slideDown(1000);
 		
 		// Scroll down to section 
 		$('html, body').animate({
-			scrollTop : $("#categories").offset().top
+			scrollTop : $("#questionary-section").offset().top
 		}, 1000);
 	});
 	
@@ -62,40 +40,104 @@ window.onload = function() {
 	/* Bind buttons to go to top section */
 	$("#BackTopButton").click(goTop);
 	$("#BackButton").click(goTop);
+	$("#GoBackButton").click(goTop);
 	
-	$("#TopButton").click(function() {
+	/* Bind buttons to submit and process calculation */
+	$("#GoButton").click(
+			function() {
+				if (age != null && country != null && gender != null
+						&& income != null && education != null
+						&& smoking != null && race != null && stayus != null) {
+					alert("submit info");
+				} 
+				else {
+					$("#error-msg").removeClass("invisible-error");
+				}
+			});
+	
+	/*  Activating selectors */
+	$(".dropdown").click(function() {
+		var cat = this.id.split("-")[0];
+		var currentQuestion = "#" + this.id.split("-")[0] + "-" + "question";
+		$(currentQuestion + ' .menu').toggleClass("showMenu");
+		$(currentQuestion + ' .menu > li').click(function() {
+			$(currentQuestion + ' .dropdown').html($(this).html());
+			$(currentQuestion + ' .menu').removeClass("showMenu");
+			$("#error-msg").addClass("invisible-error");
+			eval(cat + '= $(this).attr("id")');
+		});
+	});
+	
+	// Next buttons definition for questionary section
+	
+	$("#ShowCountryButton").click(function() {
 		// display section smoothly
-		$('*', '#categories').fadeTo("slow", 1);
-		reset();
-		
-		$( "#categories" ).slideUp( 1000, function() {
-			$("#banner").slideDown(1000);
-		  });
+		$("#country-question").slideDown(1000);
 
 		// Scroll down to section 
 		$('html, body').animate({
-			scrollTop : $("#banner").offset().top
+			scrollTop : $("#country-question").offset().top
 		}, 1000);
 	});
 	
-	/* making every category a draggable object */
-	enableDraggable();
+	$("#ShowGenderButton").click(function() {
+		// display section smoothly
+		$("#gender-question").slideDown(1000);
+
+		// Scroll down to section 
+		$('html, body').animate({
+			scrollTop : $("#gender-question").offset().top
+		}, 1000);
+	});	
 	
-	/* Define Droppable area*/
-	var droppableArea = document.querySelector('#my-drop-area');
-	$(droppableArea).droppable( {
-		accept: '#grid div',
-		hoverClass: 'highlight',
-	    drop: handleDrop
+	$("#ShowIncomeButton").click(function() {
+		// display section smoothly
+		$("#income-question").slideDown(1000);
+
+		// Scroll down to section 
+		$('html, body').animate({
+			scrollTop : $("#income-question").offset().top
+		}, 1000);
 	});
 	
-	$(".dropdown").click(function(){
-	    $(".menu").toggleClass("showMenu");
-	      $(".menu > li").click(function(){
-	        $(".dropdown > p").html($(this).html());
-	          $(".menu").removeClass("showMenu");
-	      });
-	  });
+	$("#ShowEducationButton").click(function() {
+		// display section smoothly
+		$("#education-question").slideDown(1000);
+
+		// Scroll down to section 
+		$('html, body').animate({
+			scrollTop : $("#education-question").offset().top
+		}, 1000);
+	});	
+
+	$("#ShowSmokingButton").click(function() {
+		// display section smoothly
+		$("#smoking-question").slideDown(1000);
+
+		// Scroll down to section 
+		$('html, body').animate({
+			scrollTop : $("#smoking-question").offset().top
+		}, 1000);
+	});	
+	
+	$("#ShowRaceButton").click(function() {
+		// display section smoothly
+		$("#race-question").slideDown(1000);
+
+		// Scroll down to section 
+		$('html, body').animate({
+			scrollTop : $("#race-question").offset().top
+		}, 1000);
+	});
+	$("#ShowStayusButton").click(function() {
+		// display section smoothly
+		$("#stayus-question").slideDown(1000);
+
+		// Scroll down to section 
+		$('html, body').animate({
+			scrollTop : $("#stayus-question").offset().top
+		}, 1000);
+	});	
 	
 	/* Function definitions */
 	
@@ -113,101 +155,10 @@ window.onload = function() {
 		}, 1000);
 	}
 	
-	/* General purpose functions*/
-	function reset() {
-		enableDraggable();
-		releaseAllSlot();
-		returnAllDraggables();
-		$(questionaryArea = document.getElementById('questionary-area')).removeClass('show');
-		/* remove all questions from question area*/
-		removeQuestions();
-		currentDraggable = null;
-	}
-	
 	function removeQuestions() {
 		var questions = document.querySelectorAll('#questionary-questions > div');
 		for (var i = 0; i < questions.length; i++) {
 			$(questions[i]).addClass("invisible");
-		}
-	}
-	
-	/* Return currentDraggable to its initial position*/
-	function returnDraggable() {
-		var origin = document.getElementById($(currentDraggable).attr("id")+"-origin");
-		$(currentDraggable).draggable( 'enable' );
-		$(currentDraggable).draggable( 'option', 'revert', true );
-		$(currentDraggable).removeClass('grid__item-reduced');
-		$(currentDraggable).position( { of: $(origin), my: 'center', at: 'center' } );
-		currentDraggable = null;
-	}
-	
-	/* Return every draggable to its initial position */
-	function returnAllDraggables() {
-		var draggables = document.querySelectorAll('#grid .grid__item');
-		for (var i=0; i < draggables.length ; i++) {
-			var origin = document.getElementById($(draggables[i]).attr("id")+"-origin");
-			$(draggables[i]).removeClass('grid__item-reduced');
-			$(draggables[i]).position( { of: $(origin), my: 'center', at: 'center' } );
-		}
-	}
-	
-	/* Release all slots */
-	function releaseAllSlot() {
-		for (var i= 0; i < availableSlot.length ; i++) {
-			availableSlot[i]=true;
-		}
-	}
-	
-	function handleDrop( event, ui ) {
-		if (currentDraggable != null)
-			return;
-		var nextAvailable = getNextAvailable();
-		ui.draggable.position( { of: $(nextAvailable), my: 'center', at: 'center' } );
-		ui.draggable.draggable( 'option', 'revert', false );
-		ui.draggable.addClass('grid__item-reduced');
-		var question = document.getElementById($(ui.draggable).attr("id")+"-question");
-		$(question).removeClass("invisible");
-		$("#questionary-area").addClass("show");
-		ui.draggable.draggable( 'disable' );
-		currentDraggable = ui.draggable;
-		$('*', '#categories').fadeTo("slow", 0.5);
-	}
-	
-	function getNextAvailable() {
-		var slotArray = document.querySelectorAll('#my-drop-area div');
-		for (var i=0; i < availableSlot.length; i++) {
-			if (availableSlot[i]) {
-				return slotArray[i];
-			}
-		}
-		return null;
-	}
-	
-	function takeNextAvailable() {
-		var slotArray = document.querySelectorAll('#my-drop-area div');
-		for (var i=0; i < availableSlot.length; i++) {
-			if (availableSlot[i]) {
-				availableSlot[i]=false;
-				return;
-			}
-		}
-	}
-	
-	function enableDraggable() {
-		var draggables = document.querySelectorAll('#grid .grid__item');
-		for (var i = 0; i < draggables.length; i++) {
-			$(draggables[i]).draggable({
-				containment: '#categories',
-				revert : true,
-			});
-			$(draggables[i]).draggable( 'enable' );
-		}
-	}
-	
-	function disableDraggable() {
-		var draggables = document.querySelectorAll('#grid .grid__item');
-		for (var i = 0; i < draggables.length; i++) {
-			$(draggables[i]).draggable( 'disable' );
 		}
 	}
 };

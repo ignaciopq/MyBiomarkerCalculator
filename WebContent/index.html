@@ -16,6 +16,7 @@
 <link rel="stylesheet" href="css/base/style-xlarge.css" />
 <link rel="stylesheet" href="css/base/icons.css" />
 <link rel="stylesheet" href="css/calculator.css" />
+<link rel="stylesheet" href="css/dropmenu.css" />
 </head>
 
 <body class="landing">
@@ -97,99 +98,149 @@
 		<a href="JavaScript:void(0)" class="button big" id="BackTopButton">Back to Top</a>
 	</section>
 
-<!-- 	categories selection -->
-	<section id="categories" class="wrapper style1 align-center invisible">
-		<header>
-			<div class="bar-element aside-top">
-				<a href="JavaScript:void(0)" class="button big" id="TopButton">Back to Top</a>
-			</div>
-			<div class="bar-element category-top">
-				<a href="JavaScript:void(0)" class="button big" id="CategoriesButton">Categories</a>
-			</div>
-			<div class="bar-element">
-				<a href="JavaScript:void(0)" class="button big" id="QuestionaryButton">Questionary</a>
-			</div>
-		</header>
-		<div class="container">
-			
-			<article>
-				<p >First, we need to ask you a few questions to help us with the estimation:</p>
-				<div id="questionary-questions" class="questionary-questions">
-			<div id="age-question" class="questionary__item invisible">
+	<section id="questionary-section" class="invisible">
+		<p>First, we need to ask you a few questions to help us with the
+			calculation:</p>
+		<div id="questions-container">
+			<div id="age-question" class="questionary__item">
 				<div class="question">How old are you?</div>
-				<div class="dropholder">
-				  <p>Select</p>
-				  <div class="dropdown">
-				    <p>Age</p>
-				  </div>
-				  <ul class="menu">
-				    <li>6 years or less </li>
-				    <li>More than 6 and less than 15 </li>
-				    <li>More than 15 and less than 30</li>
-				    <li>More than 30 and less than 60</li>
-				    <li>More than 60</li>
-				  </ul>
+				
+				<div class="dropholder" id="age-selector">
+					<div class="dropholder-bar">
+						<p class="dropselect">Select</p>
+						<p id="age-dropdown" class="dropdown">Age</p>
+					</div>
+					<ul class="menu">
+						<li id="age-1">20 years or less</li>
+						<li id="age-2">More than 20 and less than 40</li>
+						<li id="age-3">More than 40 and less than 60</li>
+						<li id="age-4">More than 60</li>
+					</ul>
 				</div>
+				<a href="JavaScript:void(0)" class="button big" id="ShowCountryButton">Next</a>
 			</div>
 			<div id="country-question" class="questionary__item invisible">
 				<div class="question">Where were you born?</div>
-				<input type="text" class="answer" />
-				<div class="question">How long have you lived in the US?</div>
-				<input type="text" class="answer" />
+				<div class="dropholder" id="country-selector">
+					<div class="dropholder-bar">
+						<p class="dropselect">Select</p>
+						<p id="country-dropdown" class="dropdown">Place of Birth</p>
+					</div>
+					<ul class="menu">
+						<li id="country-1">Born in the US</li>
+						<li id="country-2">Born outside the US</li>
+					</ul>
+				</div>
+				<a href="JavaScript:void(0)" class="button big" id="ShowGenderButton">Next</a>	
 			</div>
 			<div id="gender-question" class="questionary__item invisible">
 				<div class="question">Are you male of female?</div>
-				<input type="text" class="answer" />
+				<div class="dropholder" id="gender-selector">
+					<div class="dropholder-bar">
+						<p class="dropselect">Select</p>
+						<p id="gender-dropdown" class="dropdown">Gender</p>
+					</div>
+					<ul class="menu">
+						<li id="gender-1">Female</li>
+						<li id="gender-2">Male</li>
+					</ul>
+				</div>
+				<a href="JavaScript:void(0)" class="button big" id="ShowIncomeButton">Next</a>
 			</div>
 			<div id="income-question" class="questionary__item invisible">
-				<div class="question">What is your total house income?</div>
-				<input type="text" class="answer" />
+				<div class="question">What is your total house income per year?</div>
+				<div class="dropholder" id="income-selector">
+					<div class="dropholder-bar">
+						<p class="dropselect">Select</p>
+						<p id="income-dropdown" class="dropdown">Income</p>
+					</div>
+					<ul class="menu">
+						<li id="income-1">Less than 35,000</li>
+						<li id="income-2">More than 35,000 and less than 75,000</li>
+						<li id="income-3">More than 75,000</li>
+					</ul>
+				</div>
+				<a href="JavaScript:void(0)" class="button big" id="ShowEducationButton">Next</a>
 			</div>
 			<div id="education-question" class="questionary__item invisible">
 				<div class="question">What is your highest level of education?</div>
-				<input type="text" class="answer" />
+				<div class="dropholder" id="education-selector">
+					<div class="dropholder-bar">
+						<p class="dropselect">Select</p>
+						<p id="education-dropdown" class="dropdown">Education</p>
+					</div>
+					<ul class="menu">
+						<li id="education-5">Less than 9th Grade</li>
+						<li id="education-1">9 - 11th grade (no diplom)</li>
+						<li id="education-4">High School Grad or equivalent</li>
+						<li id="education-2">College or AA grade</li>
+						<li id="education-3">Graduate or Above</li>
+					</ul>
+				</div>
+				<a href="JavaScript:void(0)" class="button big" id="ShowSmokingButton">Next</a>
 			</div>
 			<div id="smoking-question" class="questionary__item invisible">
-				<div class="question">Do you smoke?</div>
-				<input type="text" class="answer" />
+				<div class="question">Do you smoke? How often?</div>
+				<div class="dropholder" id="smoking-selector">
+					<div class="dropholder-bar">
+						<p class="dropselect">Select</p>
+						<p id="smoking-dropdown" class="dropdown">Smoking</p>
+					</div>
+					<ul class="menu">
+						<li id="smoking-2">Not at all</li>
+						<li id="smoking-3">Some days</li>
+						<li id="smoking-1">Every day</li>
+					</ul>
+				</div>
+				<a href="JavaScript:void(0)" class="button big" id="ShowRaceButton">Next</a>
 			</div>
 			<div id="race-question" class="questionary__item invisible">
 				<div class="question">What is your race/ethnicity?</div>
-				<input type="text" class="answer" />
+				<div class="dropholder" id="race-selector">
+					<div class="dropholder-bar">
+						<p class="dropselect">Select</p>
+						<p id="race-dropdown" class="dropdown">Race/Ethnicity</p>
+					</div>
+					<ul class="menu">
+						<li id="race-1">Mexican American</li>
+						<li id="race-2">Non-Hispanic Black</li>
+						<li id="race-3">Non-Hispanic White</li>
+						<li id="race-4">Other Hispanic</li>
+						<li id="race-5">Other Race</li>
+					</ul>
+				</div>
+				<a href="JavaScript:void(0)" class="button big" id="ShowStayusButton">Next</a>
 			</div>
-			<div id="diet-question" class="questionary__item invisible">
-				<div class="question">Do you eat fish?</div>
-				<input type="text" class="answer" />
-				<div class="question">How often do you eat fish?</div>
-				<input type="text" class="answer" />
+			<div id="stayus-question" class="questionary__item invisible">
+				<div class="question">How long have you lived in the US?</div>
+				<div class="dropholder" id="stayus-selector">
+					<div class="dropholder-bar">
+						<p class="dropselect">Select</p>
+						<p id="stayus-dropdown" class="dropdown">Time in the US</p>
+					</div>
+					<ul class="menu">
+						<li id="stayus-5">Less than 1 year</li>
+						<li id="stayus-1">1 to 20 years</li>
+						<li id="stayus-2">20 to 40 years</li>
+						<li id="stayus-3">40 to 50 years</li>
+						<li id="stayus-4">Above 50 years</li>
+					</ul>
+				</div>
 			</div>
-		</div>
-<!-- 				<div id="my-drop-area" class="my-drop-area"> -->
-<!-- 						<div id="slot-0" class="drop-area__item"></div> -->
-<!-- 						<div id="slot-1" class="drop-area__item"></div> -->
-<!-- 						<div id="slot-2" class="drop-area__item"></div> -->
-<!-- 						<div id="slot-3" class="drop-area__item"></div> -->
-<!-- 						<div id="slot-4" class="drop-area__item"></div> -->
-<!-- 						<div id="slot-5" class="drop-area__item"></div> -->
-<!-- 						<div id="slot-6" class="drop-area__item"></div> -->
-<!-- 						<div id="slot-7" class="drop-area__item"></div> -->
-<!-- 						<div id="slot-8" class="drop-area__item"></div> -->
-<!-- 				</div> -->
-			</article>
-<!-- 			<div id="third-column">	 -->
-<!-- 				<div id="reset-button"> -->
-<!-- 					<img src="images/reset.jpg" alt="Reset"	class="icon rounded big"> -->
-<!-- 					<p> Reset</p> -->
-<!-- 				</div> -->
-<!-- 				<div id="calculate-button"> -->
-<!-- 					<img src="images/Calculator2.gif" alt="Calculator"	class="icon rounded big"> -->
-<!-- 					<p> Calculate</p> -->
-<!-- 				</div> -->
+<!-- 			<div id="diet-question" class="questionary__item"> -->
+<!-- 				<div class="question">Do you eat fish?</div> -->
+<!-- 				<input type="text" class="answer" /> -->
+<!-- 				<div class="question">How often do you eat fish?</div> -->
+<!-- 				<input type="text" class="answer" /> -->
 <!-- 			</div> -->
 		</div>
+		
+		<a href="JavaScript:void(0)" class="button big" id="GoBackButton">Back to Top</a>
+		<a href="JavaScript:void(0)" class="button big" id="GoButton">Go!</a>
+		<p id="error-msg" class="invisible-error">You need to answer all the questions before proceeding<p>
 	</section>
 
-<!-- 	<div id="questionary-area" class="questionary-area"> -->
+	<!-- 	<div id="questionary-area" class="questionary-area"> -->
 <!-- 		<div id="questionary-questions" class="questionary-questions"> -->
 <!-- 			<div id="age-question" class="questionary__item invisible"> -->
 <!-- 				<div class="question">How old are you?</div> -->

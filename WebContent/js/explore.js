@@ -40,6 +40,10 @@ window.onload = function() {
 				$(buttons[i]).addClass("active");
 				selectedCategory = buttons[i];
 			}
+			if (selectedCategory != null && selectedChemical != null) {
+				alert($(selectedCategory).attr("id")+ " " + $(selectedChemical).attr("id"));
+			}
+			
 		};
 	}
 	
