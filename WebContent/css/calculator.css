@@ -5,6 +5,7 @@ section {
 	text-shadow: 5px 5px 20px #000000;
 	color: white;
 	text-align: center;
+	font-size: small;
 }
 
 #first-section, #second-section, #third-section {
@@ -49,7 +50,7 @@ section h2 {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	font-size: 1.5em;
+	font-size: inherit;
 }
 
 #third-section > p {

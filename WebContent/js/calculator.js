@@ -48,7 +48,7 @@ window.onload = function() {
 				if (age != null && country != null && gender != null
 						&& income != null && education != null
 						&& smoking != null && race != null && stayus != null) {
-					alert("submit info");
+					window.location = 'results.html';
 				} 
 				else {
 					$("#error-msg").removeClass("invisible-error");
