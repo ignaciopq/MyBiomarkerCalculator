@@ -15,11 +15,11 @@
 section p {
 	margin: 2em;
 	text-align: justify;
+	font-size: 1.5em;
 }
 
 #instructions {
 	font-weight: bold;
-	font-size: inherit;
 }
 
 aside {
@@ -54,4 +54,8 @@ aside {
 
 .active {
 	background: #563f53;
+}
+
+.align-middle {
+	text-align: center;
 }

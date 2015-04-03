@@ -21,7 +21,7 @@ section h2 {
 	color: white;
 }
 
-#first-section p, #second-section p {
+#first-section p, #second-section p, #third-section p {
 	font-size: 1.5em;
 	padding: 2em;
 	width: 50%;
@@ -50,15 +50,15 @@ section h2 {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	font-size: inherit;
 }
 
 #third-section > p {
 	padding-top: 1em;
+	text-align: center;
 } 
 
 #third-section .button {
-	font-size: inherit;
+/* 	font-size: inherit; */
 }
 
 #questionary-section {
