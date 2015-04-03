@@ -5,14 +5,15 @@
 window.onload = function() {
 	
 	/* variables with user input */
-	var age = null;
-	var country = null;
-	var gender = null;
-	var income = null;
-	var education = null;
-	var smoking = null;
-	var race = null;
-	var stayus = null;
+	var questions = [];
+	questions["age"] = null;
+	questions["country"] = null;
+	questions["gender"] = null;
+	questions["income"] = null;
+	questions["education"] = null;
+	questions["smoking"] = null;
+	questions["race"] = null;
+	questions["stayus"] = null;
 	
 	/* Button for displaying categories section */
 	$("#CalculateButton").click(function() {
@@ -45,9 +46,9 @@ window.onload = function() {
 	/* Bind buttons to submit and process calculation */
 	$("#GoButton").click(
 			function() {
-				if (age != null && country != null && gender != null
-						&& income != null && education != null
-						&& smoking != null && race != null && stayus != null) {
+				if (questions["age"] != null && questions["country"] != null && questions["gender"] != null
+						&& questions["income"] != null && questions["education"] != null
+						&& questions["smoking"] != null && questions["race"] != null && questions["stayus"] != null) {
 					window.location = 'results.html';
 				} 
 				else {
@@ -64,7 +65,7 @@ window.onload = function() {
 			$(currentQuestion + ' .dropdown').html($(this).html());
 			$(currentQuestion + ' .menu').removeClass("showMenu");
 			$("#error-msg").addClass("invisible-error");
-			eval(cat + '= $(this).attr("id")');
+			questions[cat] = $(this).attr("id");
 		});
 	});
 	
@@ -160,5 +161,9 @@ window.onload = function() {
 		for (var i = 0; i < questions.length; i++) {
 			$(questions[i]).addClass("invisible");
 		}
+	}
+	
+	function getQuestions() {
+		return questions;
 	}
 };
