@@ -1,0 +1,101 @@
+{
+  "name": "flare",
+  "children": [
+  {
+   "name": "Lead",
+   "children": [
+    {
+     "name": "compare",
+     "children": [
+      {"name": "You", "size": 3938},
+      {"name": "Public Average", "size": 3812}
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Mercury",
+   "children": [
+    {
+     "name": "compare",
+     "children": [
+      {"name": "You", "size": 2000},
+      {"name": "Public Average", "size": 5000}
+    ]
+  }
+ ]
+},
+{
+   "name": "Bisphenol A",
+   "children": [
+    {
+     "name": "compare",
+     "children": [
+      {"name": "You", "size": 1300},
+      {"name": "Public Average", "size": 6000}
+    ]
+  }
+ ]
+},
+{
+   "name": "Pesticides",
+   "children": [
+    {
+     "name": "compare",
+     "children": [
+      {"name": "You", "size": 2500},
+      {"name": "Public Average", "size": 4000}
+    ]
+  }
+ ]
+},
+{
+   "name": "polychlorianted Biphynyls",
+   "children": [
+    {
+     "name": "compare",
+     "children": [
+      {"name": "You", "size": 1200},
+      {"name": "Public Average", "size": 2200}
+    ]
+  }
+ ]
+},
+{
+   "name": "Flame Retardants",
+   "children": [
+    {
+     "name": "compare",
+     "children": [
+      {"name": "You", "size": 7000},
+      {"name": "Public Average", "size": 4000}
+    ]
+  }
+ ]
+},
+{
+   "name": "Diethylthophosphate",
+   "children": [
+    {
+     "name": "compare",
+     "children": [
+      {"name": "You", "size": 2000},
+      {"name": "Public Average", "size": 800}
+    ]
+  }
+ ]
+},
+{
+   "name": "Phthalates and Plasticizers",
+   "children": [
+    {
+     "name": "compare",
+     "children": [
+      {"name": "You", "size": 1000},
+      {"name": "Public Average", "size": 5000}
+    ]
+  }
+ ]
+}
+]
+}

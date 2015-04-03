@@ -1,0 +1,25 @@
+{
+    "name": "result",
+    "children": [
+        {
+            "name": "allChm",
+            "children": [
+            // {
+                // "name":"lead",
+                // "children":[
+                    {"name": "0-20", "size": 2.1},
+                    {"name": "21-40", "size": 3.3},
+                // ]
+            // },
+            // {
+                // "name":"Bis",
+                // "children":[
+                    {"name": "41-60","size": 1.9},
+                    {"name": "61-80","size": 2.3},
+                    {"name": "81-100","size": 1.2}
+                // ]
+            // }
+            ]
+        }
+    ]
+}
