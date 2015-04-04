@@ -243,8 +243,24 @@ function getDB(){
 $app->post(
     '/post',
     function () use ($app){
-        $array = $app->request->post('questions');
-        echo $array['age'];
+        $age = $app->request->post('age');
+        $country = $app->request->post('country');
+        $income = $app->request->post('income');
+        $education = $app->request->post('education');
+        $smoking = $app->request->post('smoking');
+        $race = $app->request->post('race');
+        $stayus = $app->request->post('stayus');
+        $gender = $app->request->post('gender');
+
+        $app->setCookie('age',$age);
+        $app->setCookie('country',$country);
+        $app->setCookie('income',$income);
+        $app->setCookie('education',$education);
+        $app->setCookie('smoking',$smoking);
+        $app->setCookie('race',$race);
+        $app->setCookie('stayus',$stayus);
+        $app->setCookie('gender',$gender);
+        
     }
 );
 

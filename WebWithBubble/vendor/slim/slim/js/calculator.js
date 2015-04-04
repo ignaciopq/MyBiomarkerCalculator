@@ -168,9 +168,17 @@ window.onload = function() {
 		$.ajax({
 			type: "post",
 			url: "http://localhost/generalbubble/vendor/slim/slim/index.php/post",
-			data: questions,
-			success: function(msg){
-				alert(msg);
+			data: {age: questions["age"],
+				   country: questions["country"],
+				   gender: questions["gender"],
+				   incomde: questions["income"],
+				   education: questions["education"],
+				   smoking: questions["smoking"],
+  				   race: questions["race"],
+				   stayus: questions["stayus"],
+				},
+			success: function(){
+					console.log("cookies set.");
 			}
 		});
 	}

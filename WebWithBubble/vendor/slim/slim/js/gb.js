@@ -9,7 +9,11 @@ var finalEducationRoot = JSON.parse('{"name":"Education","children":[]}');
 var finalSmokeRoot = JSON.parse('{"name":"Smoking","children":[]}');
 var finalRaceRoot = JSON.parse('{"name":"Race","children":[]}');
 var finalLandUSRoot = JSON.parse('{"name":"US","children":[]}');
-
+var infoMap = {"age-1":"0-20","age-2":"21-40","age-3":"41-60","age-4":"above60",
+               "country-1":"bornInUS","country-2":"others",
+               "gender-1":"female","gender-2":"male",
+               "income-1":"0-34999","income-2":"35000-74999","income-3":"above 75000",
+               ""};
 function loadData()
 {
   // mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/1"));
@@ -66,12 +70,15 @@ function loadData()
   // finalRoot.children.push(finalRaceRoot);
   // finalRoot.children.push(finalSmokeRoot);
   // showbubble(finalRoot);
-  // var userParam;
-  $.getScript("js/calculator.js", function(){
-    // userParam = getQuestions();
-    console.log(questions["age"]);
-  });
-  // console.log(userParam["age"]);
+  var age = getCookies("age");
+  var country = getCookies("country");
+  var gender = getCookies("gender");
+  var income = getCookies("income");
+  var education = getCookies("education");
+  var smoking = getCookies("smoking");
+  var race = getCookies("race");
+  var stayus = getCookies("stayus");
+  console.log("cookies are :"+age+country+gender+income+education+smoking+race+stayus);
 }
 
 function sendUrl(urlString){
@@ -131,6 +138,11 @@ function mergeData(tempRoot){
   }
 }
 
+function getCookies(name){
+  var value = "; "+document.cookie;
+  var parts = value.split("; "+name+"=");
+  if(parts.length == 2) return parts.pop().split(";").shift();
+}
 function showbubble(root){
 
 var margin = 20,
