@@ -1,0 +1,98 @@
+.dropholder {
+	width: 25%;
+	margin: 1em auto;
+	border-radius: 4px;
+	color: #fff;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.dropholder:hover,.dropholder:hover:after {
+	-webkit-animation-play-state: paused;
+	-moz-animation-play-state: paused;
+	-ms-animation-play-state: paused;
+	-o-animation-play-state: paused;
+	animation-play-state: paused;
+}
+
+.dropholder ul {
+	list-style-type: none;
+}
+
+.dropholder-bar {
+	border: 1px white solid;
+	overflow: hidden;
+	padding: 0px;
+	height: 58px;
+	margin-bottom: 1em;
+	border-radius: 4px;
+}
+
+.dropselect , .dropdown {
+	float: left;
+	padding: 1em;
+	height: inherit;
+}
+
+.dropselect {
+	border-right: white 1px solid;
+	width: 30%;	
+}
+
+.dropdown {
+	width: 70%;
+	cursor: pointer;
+	border: none;
+}
+
+.dropdown:hover {
+	background: url("../images/pic05.jpg");
+}
+
+.dropdown:after {
+	font-size: 18px;
+}
+
+.menu {
+	margin-bottom: 1em;
+	padding-right: 1em;
+	cursor: pointer;
+	opacity: 0;
+	background: transparent;
+	border: 1px solid white;
+	border-radius: 4px;
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-ms-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	transition: all 0.4s;
+	visibility: hidden;
+}
+
+.menu li {
+	padding: 10px 10px;
+	border-bottom: 1px dotted #fff;
+	color: #fff;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.menu li:hover {
+	background: url("../images/pic05.jpg");
+	padding-left: 20px;
+}
+
+.menu li:last-child {
+	border: none;
+}
+
+.showMenu {
+	opacity: 1;
+	visibility: visible;
+}
