@@ -13,72 +13,70 @@ var infoMap = {"age-1":"0-20","age-2":"21-40","age-3":"41-60","age-4":"above60",
                "country-1":"bornInUS","country-2":"others",
                "gender-1":"female","gender-2":"male",
                "income-1":"0-34999","income-2":"35000-74999","income-3":"above 75000",
-               ""};
+               "education-1":"9 - 11th grade( with no diploma)","education-2":"College or AA grade",
+               "education-3":"Graduate or Above","education-4":"High School Grad or equivalent",
+               "education-5":"Less than 9th Grade",
+               "smoking-1":"Every day","smoking-2":"Not at all","smoking-3":"Some days",
+               "race-1":"Mexican American","race-2":"Non-Hispanic Black","race-3":"Non-Hispanic White",
+               "race-4":"Other Hispanic","race-5":"Other Race",
+               "stayus-1":"1 to 20 years","stayus-2":"20 to 40 years","stayus-3":"40 to 50 years","stayus-4":"Above 50 years",
+               "stayus-5":"Less than 1 year"};
 function loadData()
 {
-  // mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/1"));
-  // mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/2"));
-  // mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/3"));
-  // mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/4"));
-  // mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/5"));
-  // mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/6"));
-  // mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/7"));
-  // mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/8"));
-  // mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/9"));
-  // mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/10"));
-  // mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/11"));
-  // mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/12"));
-  // mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/13"));
-  // mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/14"));
-  // mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/15"));
-  // mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/16"));
-  // mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/17"));
-  // mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/18"));
-  // mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/19"));
-  // mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/20"));
-  // mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/21"));
-  // mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/22"));
-  // mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/23"));
-  // mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/24"));
-  // mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/25"));
-  // mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/26"));
-  // mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/27"));
-  // mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/28"));
-  // mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/29"));
-  // mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/30"));
-  // mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/31"));
-  // mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/32"));
-  // mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/33"));
-  // mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/34"));
-  // mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/35"));
-  // mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/36"));
-  // mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/37"));
-  // mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/38"));
-  // mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/39"));
-  // mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/40"));
-  // mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/41"));
-  // mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/42"));
-  // mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/43"));
-  // mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/44"));
-  // mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/45"));
-  // mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/46"));
-  // finalRoot.children.push(finalCountryRoot);
-  // finalRoot.children.push(finalAgeRoot);
-  // finalRoot.children.push(finalGenderRoot);
-  // finalRoot.children.push(finalIncomeRoot);
-  // finalRoot.children.push(finalEducationRoot);
-  // finalRoot.children.push(finalRaceRoot);
-  // finalRoot.children.push(finalSmokeRoot);
-  // showbubble(finalRoot);
-  var age = getCookies("age");
-  var country = getCookies("country");
-  var gender = getCookies("gender");
-  var income = getCookies("income");
-  var education = getCookies("education");
-  var smoking = getCookies("smoking");
-  var race = getCookies("race");
-  var stayus = getCookies("stayus");
-  console.log("cookies are :"+age+country+gender+income+education+smoking+race+stayus);
+  mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/1"));
+  mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/2"));
+  mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/3"));
+  mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/4"));
+  mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/5"));
+  mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/6"));
+  mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/7"));
+  mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/8"));
+  mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/9"));
+  mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/10"));
+  mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/11"));
+  mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/12"));
+  mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/13"));
+  mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/14"));
+  mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/15"));
+  mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/16"));
+  mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/17"));
+  mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/18"));
+  mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/19"));
+  mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/20"));
+  mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/21"));
+  mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/22"));
+  mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/23"));
+  mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/24"));
+  mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/25"));
+  mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/26"));
+  mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/27"));
+  mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/28"));
+  mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/29"));
+  mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/30"));
+  mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/31"));
+  mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/32"));
+  mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/33"));
+  mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/34"));
+  mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/35"));
+  mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/36"));
+  mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/37"));
+  mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/38"));
+  mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/39"));
+  mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/40"));
+  mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/41"));
+  mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/42"));
+  mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/43"));
+  mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/44"));
+  mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/45"));
+  mergeData(sendUrl("http://localhost/generalbubble/vendor/slim/slim/index.php/46"));
+  finalRoot.children.push(finalCountryRoot);
+  finalRoot.children.push(finalAgeRoot);
+  finalRoot.children.push(finalGenderRoot);
+  finalRoot.children.push(finalIncomeRoot);
+  finalRoot.children.push(finalEducationRoot);
+  finalRoot.children.push(finalRaceRoot);
+  finalRoot.children.push(finalSmokeRoot);
+  showbubble(finalRoot);
 }
 
 function sendUrl(urlString){
@@ -145,6 +143,16 @@ function getCookies(name){
 }
 function showbubble(root){
 
+var age = getCookies("age");
+var country = getCookies("country");
+var gender = getCookies("gender");
+var income = getCookies("income");
+var education = getCookies("education");
+var smoking = getCookies("smoking");
+var race = getCookies("race");
+var stayus = getCookies("stayus");
+
+
 var margin = 20,
     diameter = 960;
 
@@ -172,7 +180,30 @@ var svg = d3.select("#big-chart").append("svg")
       .data(nodes)
     .enter().append("circle")
       .attr("class", function(d) { return d.parent ? d.children ? "node" : "node node--leaf" : "node node--root"; })
-      .style("fill", function(d) { return d.children ? color(d.depth) : null; })
+      .style("fill", function(d) { 
+        if(d.children){
+          return color(d.depth);
+        }else if(d.name === infoMap[age]){
+          return color(d.depth);
+        }else if(d.name === infoMap[country]){
+          return color(d.depth);
+        }else if(d.name === infoMap[gender]){
+          return color(d.depth);
+        }else if(d.name === infoMap[income]){
+          return color(d.depth);
+        }else if(d.name === infoMap[education]){
+          return color(d.depth);
+        }else if(d.name === infoMap[stayus]){
+          return color(d.depth);
+        }else if(d.name === infoMap[race]){
+          return color(d.depth);
+        }else if(d.name === infoMap[smoking]){
+          return color(d.depth);
+        }else{
+          return null;
+        }
+        // return d.children ? color(d.depth) : d.name === infoMap[]; 
+      })
       .on("click", function(d) { if (focus !== d) zoom(d), d3.event.stopPropagation(); });
 
   var text = svg.selectAll("text")

@@ -49,8 +49,8 @@ window.onload = function() {
 				if (questions["age"] != null && questions["country"] != null && questions["gender"] != null
 						&& questions["income"] != null && questions["education"] != null
 						&& questions["smoking"] != null && questions["race"] != null && questions["stayus"] != null) {
-					// window.location = 'results.html';
-					getQuestions();
+					setQuestions();
+					window.location = 'results.html';
 				} 
 				else {
 					$("#error-msg").removeClass("invisible-error");
@@ -164,7 +164,7 @@ window.onload = function() {
 		}
 	}
 	
-	function getQuestions() {
+	function setQuestions() {
 		$.ajax({
 			type: "post",
 			url: "http://localhost/generalbubble/vendor/slim/slim/index.php/post",
