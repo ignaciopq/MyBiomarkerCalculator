@@ -167,23 +167,23 @@ function getDetailsFromDB($param1, $param2) {
 
 	// Conditions for LengthInUS
 	elseif ($param1 == 'stayus' && $param2 == 'bisphenol') {
-		$query = "SELECT lengthInUS,bisphenol FROM medianLengthInUS;";
+		$query = "SELECT lengthInUS,bisphenol FROM medianLenthInUS;";
 	} elseif ($param1 == 'stayus' && $param2 == 'lead') {
-		$query = "SELECT lengthInUS,bloodLead FROM medianLengthInUS;";
+		$query = "SELECT lengthInUS,bloodLead FROM medianLenthInUS;";
 	} elseif ($param1 == 'stayus' && $param2 == 'mercury') {
-		$query = "SELECT lengthInUS,mercury FROM medianLengthInUS;";
+		$query = "SELECT lengthInUS,mercury FROM medianLenthInUS;";
 	} elseif ($param1 == 'stayus' && $param2 == 'cotinine') {
-		$query = "SELECT lengthInUS,cotinine FROM medianLengthInUS;";
+		$query = "SELECT lengthInUS,cotinine FROM medianLenthInUS;";
 	} elseif ($param1 == 'stayus' && $param2 == 'dde') {
-		$query = "SELECT lengthInUS,dde FROM medianLengthInUS;";
+		$query = "SELECT lengthInUS,dde FROM medianLenthInUS;";
 	} elseif ($param1 == 'stayus' && $param2 == 'pcb') {
-		$query = "SELECT lengthInUS,pcb153 FROM medianLengthInUS;";
+		$query = "SELECT lengthInUS,pcb153 FROM medianLenthInUS;";
 	} elseif ($param1 == 'stayus' && $param2 == 'pde') {
-		$query = "SELECT lengthInUS,pde FROM medianLengthInUS;";
+		$query = "SELECT lengthInUS,pde FROM medianLenthInUS;";
 	} elseif ($param1 == 'stayus' && $param2 == 'insesticides') {
-		$query = "SELECT lengthInUS,diethylthiophosphate FROM medianLengthInUS;";
+		$query = "SELECT lengthInUS,diethylthiophosphate FROM medianLenthInUS;";
 	} elseif ($param1 == 'stayus' && $param2 == 'dehp') {
-		$query = "SELECT lengthInUS,hexylphthalate FROM medianLengthInUS;";
+		$query = "SELECT lengthInUS,hexylphthalate FROM medianLenthInUS;";
 	}
 	
 	//Call the GetData Function with the Query formed
