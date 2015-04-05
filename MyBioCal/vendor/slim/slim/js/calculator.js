@@ -166,7 +166,7 @@ window.onload = function() {
 	function setQuestions() {
 		$.ajax({
 			type: "post",
-			url: "http://localhost/generalbubble/vendor/slim/slim/index.php/post",
+			url: "http://localhost/MyBioCal/vendor/slim/slim/index.php/post",
 			data: {age: questions["age"],
 				   country: questions["country"],
 				   gender: questions["gender"],

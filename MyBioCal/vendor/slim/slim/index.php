@@ -221,6 +221,75 @@ function selectData($var)
             $qur = "SELECT smoking as name, hexylphthalate as size FROM medianSmoking";
             getData($qur,"smoking","hexylphthalate");
             break;
+        case 47:
+            $qur = "SELECT age as name, dde as size FROM medianAge";
+            getData($qur,"age","dde");
+            break;
+        case 48:
+            $qur = "SELECT age as name, pde as size FROM medianAge";
+            getData($qur,"age","pde");
+            break;
+        case 49:
+            $qur = "SELECT country as name, dde as size FROM medianCountry";
+            getData($qur,"country","dde");
+            break;
+        case 50:
+            $qur = "SELECT education as name, dde as size FROM medianEducation";
+            getData($qur,"education","dde");
+            break;
+        case 51:
+            $qur = "SELECT gender as name, dde as size FROM medianGender";
+            getData($qur,"gender","dde");
+            break;
+        case 52:
+            $qur = "SELECT gender as name, pde as size FROM medianGender";
+            getData($qur,"gender","pde");
+            break;
+        case 53:
+            $qur = "SELECT income as name, dde as size FROM medianIncome";
+            getData($qur,"income","dde");
+            break;
+        case 54:
+            $qur = "SELECT race as name, dde as size FROM medianRace";
+            getData($qur,"race","dde");
+            break;
+        case 55:
+            $qur = "SELECT race as name, pde as size FROM medianRace";
+            getData($qur,"race","pde");
+            break;
+        case 56:
+            $qur = "SELECT lengthInUS as name, bisphenol as size FROM medianLenthInUS";
+            getData($qur,"lengthInUS","bisphenol");
+            break;
+        case 57:
+            $qur = "SELECT lengthInUS as name, bloodLead as size FROM medianLenthInUS";
+            getData($qur,"lengthInUS","bloodLead");
+            break;
+        case 58:
+            $qur = "SELECT lengthInUS as name, cotinine as size FROM medianLenthInUS";
+            getData($qur,"lengthInUS","cotinine");
+            break;
+        case 59:
+            $qur = "SELECT lengthInUS as name, diethylthiophosphate as size FROM medianLenthInUS";
+            getData($qur,"lengthInUS","diethylthiophosphate");
+            break;
+        case 60:
+            $qur = "SELECT lengthInUS as name, hexylphthalate as size FROM medianLenthInUS";
+            getData($qur,"lengthInUS","hexylphthalate");
+            break;
+        case 61:
+            $qur = "SELECT lengthInUS as name, pcb153 as size FROM medianLenthInUS";
+            getData($qur,"lengthInUS","pcb153");
+            break;
+        case 62:
+            $qur = "SELECT lengthInUS as name, mercury as size FROM medianLenthInUS";
+            getData($qur,"lengthInUS","mercury");
+            break;
+        case 63:
+            $qur = "SELECT lengthInUS as name, dde as size FROM medianLenthInUS";
+            getData($qur,"lengthInUS","dde");
+            break;
+
     }
 }
 
