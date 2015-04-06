@@ -57,13 +57,11 @@ function mergeData(tempRoot){
       for(var k in tempRoot.children){
         finalCountryRoot.children.push(tempRoot.children[k]);
       }
-      // console.log(JSON.stringify(finalCountryRoot));
       break;
     case "age":
       for(var k in tempRoot.children){
         finalAgeRoot.children.push(tempRoot.children[k]);
       }
-      // console.log(JSON.stringify(finalCountryRoot));
       break;
     case "gender":
       for(var k in tempRoot.children){
@@ -109,8 +107,6 @@ var smoking = getCookies("smoking");
 var race = getCookies("race");
 var stayus = getCookies("stayus");
 
-console.log("cookies: "+age+gender+education+income+race+stayus+smoking+country);
-console.log(infoMap[age]);
 var margin = 20,
     diameter = 960;
 
@@ -123,7 +119,6 @@ var pack = d3.layout.pack()
     .padding(2)
     .size([diameter - margin, diameter - margin])
     .value(function(d) { return d.size; })
-//$(function(){var svg = d3.select("#chart").append("svg:svg");});
 var svg = d3.select("#big-chart").append("svg")
     .attr("width", diameter)
     .attr("height", diameter)
@@ -142,7 +137,6 @@ var svg = d3.select("#big-chart").append("svg")
         if(d.children){
           return color(d.depth);
         }else if(d.name === infoMap[age]){
-          console.log("age detect" + infoMap[age]);
           return "lightgoldenrodyellow";
         }else if(d.name === infoMap[country]){
           return "lightgoldenrodyellow";
@@ -171,7 +165,34 @@ var svg = d3.select("#big-chart").append("svg")
       .attr("class", "label")
       .style("fill-opacity", function(d) { return d.parent === root ? 1 : 0; })
       .style("display", function(d) { return d.parent === root ? null : "none"; })
-      .text(function(d) { return d.parent === root ? d.name : d.size ? d.name +" : "+ d.size : d.name; });
+      .text(function(d) { 
+        if(d.parent === root){
+          return d.name;
+        }else if(d.size){
+          return d.name +" : "+ d.size;
+        }else{
+          if(d.name == "bisphenol"){
+            return d.name +" : " + " ng/ml";
+          }else if(d.name == "bloodLead"){
+            return d.name +" : " + " ug/dl";
+          }else if(d.name == "mercury"){
+            return d.name +" : " + " ug/l";
+          }else if(d.name == "cotinine"){
+            return d.name +" : " + " ng/ml";
+          }else if(d.name == "dde"){
+            return d.name +" : " + " ng/g";
+          }else if(d.name == "pcb153"){
+            return d.name +" : "+ " ng/g";
+          }else if(d.name == "diethylthiophosphate"){
+            return d.name +" : "+ " ug/l";
+          }else if(d.name == "hexylphthalate"){
+            return d.name +" : " + " ug/ml";
+          }else{
+            return d.name;
+          }
+        }
+        // return d.parent === root ? d.name : d.size ? d.name +" : "+ d.size : d.name; 
+      });
 
   var node = svg.selectAll("circle,text");
 
