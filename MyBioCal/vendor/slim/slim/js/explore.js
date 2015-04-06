@@ -9,6 +9,12 @@ window.onload = function() {
 		$(buttons[i]).click(activateButton(i));
 	}
 	
+	$("#ErrorContinueButton").click(function() {
+		messageArea = document.getElementById('message-area');
+		$('*', '#main').fadeTo("slow", 1);
+		$(messageArea).removeClass('show');
+	});
+	
 	/* i is an int with the position in the array of the item to activate */
 	function activateButton(i) {
 		return function() {

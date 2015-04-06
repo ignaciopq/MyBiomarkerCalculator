@@ -10,8 +10,8 @@
 <script src="js/jquery-1.10.2.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="js/jquery-ui.js"></script>
-<script src="js/exploreBubble.js"></script>
 <script src="js/explore.js"></script>
+<script src="js/exploreBubble.js"></script>
 
 <link rel="stylesheet" href="css/base/skel.css" />
 <link rel="stylesheet" href="css/base/style.css" />
@@ -128,8 +128,20 @@
 		<div id="chart-area">
 			 
 		</div>
+		
 	</section>
-	
+	<section>
+		<div id="message-area" class="message-area">
+			<div id="message-block" class="message-block">
+				<img id="alert-icon" src="images/aler_icon.png" alt="NotFound">
+				<p> We are sorry, but we couldn't complete the request. The selected <strong>Category</strong> / <strong>Chemical</strong> combination is not available in the dataset used for this application.</p>
+				<p> Please click <strong>Continue</strong> and try a different combination.</p>
+			</div>
+			<div class="message-buttons">
+				<a href="JavaScript:void(0)" class="button alt" id="ErrorContinueButton">Continue</a>
+			</div>	
+		</div>
+	</section>	
 	<!-- Footer -->
 	<footer id="footer">
 		<div class="container">

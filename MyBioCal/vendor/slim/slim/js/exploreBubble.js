@@ -38,9 +38,12 @@ function exploreCategoriesVsChemicals($category,$chemical){
  * properly from the DB
  */
 function showErrorFromDB(){
-	var chartDiv=document.getElementById("chart-area");
-	chartDiv.className = 'errorChart';
-	chartDiv.innerHTML = "ERROR !!!! Data is not present in the NHANES for this COMBINATION";
+	/* display error section and fade background*/
+	$('*', '#main').fadeTo("slow", 0.4);
+	$("#message-area").addClass("show");
+//	var chartDiv=document.getElementById("chart-area");
+//	chartDiv.className = 'errorChart';
+//	chartDiv.innerHTML = "ERROR !!!! Data is not present in the NHANES for this COMBINATION";
 	
 }
 
