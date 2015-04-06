@@ -5,6 +5,7 @@
 window.onload = function() {
 	
 	/* variables with user input */
+	var infoList = document.querySelectorAll('.clickable-info');
 	var questions = [];
 	questions["age"] = null;
 	questions["country"] = null;
@@ -67,6 +68,18 @@ window.onload = function() {
 			$("#error-msg").addClass("invisible-error");
 			questions[cat] = $(this).attr("id");
 		});
+	});
+	
+	/* enabling clickable information items */
+	for (var i = 0; i < infoList.length; i++) {
+		$(infoList[i]).click(activateInfo(i));
+	}
+	
+	$("#CloseInfoButton").click(function() {
+		informationArea = document.getElementById('information-area');
+		$(informationArea).removeClass('show');
+		/* remove all questions from question area*/
+		removeInfo();
 	});
 	
 	// Next buttons definition for questionary section
@@ -141,6 +154,22 @@ window.onload = function() {
 	});	
 	
 	/* Function definitions */
+	
+	function removeInfo() {
+		var info = document.querySelectorAll('#information-block > div');
+		for (var i = 0; i < info.length; i++) {
+			$(info[i]).addClass("invisible");
+		}
+	}
+	
+	function activateInfo(i) {
+		return (function() {
+			removeInfo();
+			var id = "#" + infoList[i].id + "-info";
+			$(id).removeClass("invisible");
+			$("#information-area").addClass("show");
+		});
+	}
 	
 	/* Scrolling functions*/
 	function goBottom() {

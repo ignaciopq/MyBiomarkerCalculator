@@ -2,8 +2,8 @@
 
 .category-icon {
 	border-radius: 100%;
-	height: 45px;
-	width: 45px;
+	height: 35px;
+	width: 35px;
 	display: block;
 	margin: auto;
 	opacity: 0.5;
@@ -11,17 +11,17 @@
 
 	
 .grid__item {
-	font-size: 15pt;
+	font-size: 12pt;
 	display: inline-block;
 	border-radius: 6px;
-	width: 100px;
-	height: 100px;
+	width: 80px;
+	height: 80px;
 	background: #000000;
 	color: #76737C;
 	z-index: 1;
 	text-align: center;
 	vertical-align: middle;
-	padding-top: 25px;
+	padding-top: 20px;
 	margin: 5px;
 }
 
@@ -41,3 +41,38 @@
 	opacity: 1;
 }
 
+.category-icon-small {
+	border-radius: 100%;
+	height: 15px;
+	width: 15px;
+	display: block;
+	margin: auto;
+}
+
+.tiny-icon-box {
+	display: inline-block;
+	border-radius: 6px;
+	width: 30px;
+	height: 30px;
+	background: #000000;
+	vertical-align: middle;
+	padding-top: 7.5px;
+}
+
+.category-icon-medium {
+	border-radius: 100%;
+	height: 30px;
+	width: 30px;
+	display: block;
+	margin: auto;
+}
+
+.medium-icon-box {
+	display: inline-block;
+	border-radius: 6px;
+	width: 50px;
+	height: 50px;
+	background: #000000;
+	vertical-align: middle;
+	padding-top: 8.5px;
+}

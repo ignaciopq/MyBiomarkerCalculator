@@ -17,6 +17,7 @@
 <link rel="stylesheet" href="css/base/icons.css" />
 <link rel="stylesheet" href="css/calculator.css" />
 <link rel="stylesheet" href="css/dropmenu.css" />
+<link rel="stylesheet" href="css/selectors.css" />
 </head>
 
 <body class="landing">
@@ -49,34 +50,396 @@
 			<div class="column-list">
 				<ul>
 					<li><strong>Toxicants:</strong></li>
-					<li>Bisphenol A</li>
-					<li>Lead</li>
-					<li>Mercury</li>
-					<li>Cotinine</li>
-					<li>DDE</li>
-					<li>Polychlorinated Biphenyls</li>
-					<li>PDE-47</li>
-					<li>Insesticides (Diethylthiophosphate)</li>
-					<li>Phthalates and Plasticizers</li>
+					<li class="clickable-info" id="list-bpa">
+						<div class="tiny-icon-box">
+							<img src="images/bpa_icon.png" alt="bpaIcon" class="category-icon-small">
+						</div>
+						Bisphenol A
+					</li>
+					<li class="clickable-info" id="list-lead">
+						<div class="tiny-icon-box">
+							<img src="images/lead_icon.png" alt="leadIcon" class="category-icon-small">
+						</div>
+						Lead
+					</li>
+					<li class="clickable-info" id="list-mercury">
+						<div class="tiny-icon-box">
+							<img src="images/mercury_icon.png" alt="merIcon" class="category-icon-small">
+						</div>
+						Mercury
+					</li>
+					<li class="clickable-info" id="list-cotinine">
+						<div class="tiny-icon-box">
+							<img src="images/cotinine_icon.png" alt="cotIcon" class="category-icon-small">
+						</div>
+						Cotinine
+					</li>
+					<li class="clickable-info" id="list-dde">
+						<div class="tiny-icon-box">
+							<img src="images/dde_icon.png" alt="ddeIcon" class="category-icon-small">
+						</div>
+						DDE
+					</li>
+					<li class="clickable-info" id="list-pcb">
+						<div class="tiny-icon-box">
+							<img src="images/pcb_icon.png" alt="pcbIcon" class="category-icon-small">
+						</div>
+						Polychlorinated Biphenyls
+					</li>
+					<li class="clickable-info" id="list-pde">
+						<div class="tiny-icon-box">
+							<img src="images/pde-47_icon.png" alt="pdeIcon" class="category-icon-small">
+						</div>
+						PDE-47
+					</li>
+					<li class="clickable-info" id="list-insesticides">
+						<div class="tiny-icon-box">
+							<img src="images/insecticide_icon.png" alt="insestIcon" class="category-icon-small">
+						</div>
+						Insesticides
+					</li>
+					<li class="clickable-info" id="list-dehp">
+						<div class="tiny-icon-box">
+							<img src="images/dehp_icon.png" alt="dehpIcon" class="category-icon-small">
+						</div>
+						Phthalates and Plasticizers
+					</li>
 				</ul>
 			</div>
 			<div class="column-list">
 				<ul>
 					<li><strong>Categories:</strong></li>
-					<li>Age</li>
-					<li>Country</li>
-					<li>Gender</li>
-					<li>Income</li>
-					<li>Education</li>
-					<li>Smoking</li>
-					<li>Ethnicity</li>
-					<li>Diet</li>
+					<li class="clickable-info" id="list-age">
+						<div class="tiny-icon-box">
+							<img src="images/age_icon_trans.png" alt="ageIcon" class="category-icon-small">
+						</div>
+						Age
+					</li>
+					<li class="clickable-info" id="list-country">
+						<div class="tiny-icon-box">
+							<img src="images/country_icon_trans.png" alt="Icon" class="category-icon-small">
+						</div>
+						Country
+					</li>
+					<li class="clickable-info" id="list-gender">
+						<div class="tiny-icon-box">
+							<img src="images/gender_icon_trans.png" alt="Icon" class="category-icon-small">
+						</div>
+						Gender
+					</li>
+					
+					<li class="clickable-info" id="list-income">
+						<div class="tiny-icon-box">
+							<img src="images/income_icon_trans.png" alt="Icon" class="category-icon-small">
+						</div>
+						Income
+					</li>
+						
+					<li class="clickable-info" id="list-education">
+						<div class="tiny-icon-box">
+							<img src="images/education_icon_trans.png" alt="Icon" class="category-icon-small">
+						</div>
+						Education
+					</li>
+					
+					<li class="clickable-info" id="list-smoking">
+						<div class="tiny-icon-box">
+							<img src="images/smoking_icon_trans.png" alt="Icon" class="category-icon-small">
+						</div>
+						Smoking
+					</li>
+					
+					<li class="clickable-info" id="list-race">
+						<div class="tiny-icon-box">
+							<img src="images/race_icon_trans.png" alt="Icon" class="category-icon-small">
+						</div>
+						Ethnicity
+					</li>
+					
+					<li class="clickable-info" id="list-stayus">
+						<div class="tiny-icon-box">
+							<img src="images/stayus_icon.gif" alt="Icon" class="category-icon-small">
+						</div>
+						Length of Stay in the US
+					</li>
 				</ul>
 			</div>
 		</div>
+		<p><strong>Click on a toxicant or factor to obtain more information.</strong> </p>
 		<a href="JavaScript:void(0)" class="button big" id="BackButton">Back to Top</a>
 		<a href="JavaScript:void(0)" class="button big" id="StartCalculationButton">Start Calculation</a>
-		
+
+		<div id="information-area" class="information-area">
+			<div id="information-block" class="information-block">
+				<div id="list-bpa-info" class="invisible">
+					<div class="tiny-icon-box">
+						<img src="images/bpa_icon.png" alt="bpaIcon" class="category-icon-small">
+					</div>
+					<p class="label">Bisphenol A</p>
+					<p>Biomonitoring of urinary environmental phenols and parabens
+						is used to determine their prevalence in humans and the relevance
+						of human exposure in public health. The sources of human exposure
+						to these phenolic compounds include industrial pollution,
+						pesticide use, food and bottled water, and personal care products.
+						Specifically, bisphenol A (BPA) is used in the manufacture of
+						polycarbonate plastics and epoxy resins, which have been used in
+						baby bottles, as protective coatings on food containers, and as
+						composites and sealants in dentistry.</p>
+				</div>
+				<div id="list-lead-info" class="invisible">
+					<div class="tiny-icon-box">
+							<img src="images/lead_icon.png" alt="leadIcon" class="category-icon-small">
+					</div>
+					<p class="label">Lead</p>
+					<p>Lead is a known environmental toxin that has been shown to
+						deleteriously affect the nervous, hematopoietic, endocrine, renal,
+						and reproductive systems. In young children, lead exposure is a
+						particular hazard because children more readily absorb lead than
+						do adults, and children’s developing nervous systems also make
+						them more susceptible to the effects of lead. The primary sources
+						of exposure for children are lead-laden paint chips and dust as a
+						result of deteriorating lead-based paint. The risk for lead
+						exposure is disproportionately higher for children who are poor,
+						non-Hispanic black, living in large metropolitan areas, or living
+						in older housing. Among adults, the most common high exposure
+						sources are occupational. Blood lead levels measured in previous
+						NHANES programs have been the cornerstone of lead exposure
+						surveillance in the U.S. The data have been used to document the
+						burden and dramatic decline of elevated blood lead levels, to
+						promote the reduction of lead use, and to help to redefine
+						national lead poisoning prevention guidelines, standards, and
+						abatement activities.</p>
+				</div>
+				<div id="list-mercury-info" class="invisible">
+					<div class="tiny-icon-box">
+						<img src="images/mercury_icon.png" alt="merIcon" class="category-icon-small">
+					</div>
+					<p class="label">Mercury</p>
+					<p>Uncertainties exist regarding levels of exposure to methyl
+						mercury from fish consumption and potential health effects
+						resulting from this exposure. Past estimates of exposure to methyl
+						mercury have been obtained from results of food consumption
+						surveys and measures of methyl mercury in fish. Measures of a
+						biomarker of exposure are needed for improved exposure
+						assessments. Blood mercury levels will be assessed in two
+						subpopulations particularly vulnerable to the health effects from
+						mercury exposure: children 1–5 years old and women of childbearing
+						age. Blood measures of total and inorganic mercury will be
+						important for evaluation of exposure from exposure to mercury in
+						interior latex paints</p>
+				</div>
+				<div id="list-cotinine-info" class="invisible">
+					<div class="tiny-icon-box">
+						<img src="images/cotinine_icon.png" alt="cotIcon" class="category-icon-small">
+					</div>
+					<p class="label">Cotinine</p>
+					<p>Cotinine is a major metabolite of nicotine that may be used
+						as a marker for both active smoking, and as an index to
+						Environmental Tobacco Smoke (ETS) exposure, or "passive smoking".
+						Cotinine is generally preferred over nicotine for such assessments
+						because of its substantially longer half-life. The half-life of
+						cotinine in plasma has been estimated to be about 15–20 hrs;1–3 by
+						contrast, the half-life of nicotine is only 0.5–3 hrs.4-6 Cotinine
+						may be measured in serum, urine or saliva – the half-life of
+						cotinine in all three fluids is essentially the same. Cotinine
+						concentrations tend to be higher (3–8×) in urine than in serum;
+						however, for studies requiring a quantitative assessment of
+						exposure, plasma or serum is regarded as the fluid of choice.</p>
+				</div>
+				<div id="list-dde-info" class="invisible">
+					<div class="tiny-icon-box">
+						<img src="images/dde_icon.png" alt="ddeIcon" class="category-icon-small">
+					</div>
+					<p class="label">DDE</p>
+					<p>Organochlorine pesticides, an older class of pesticides, are
+						effective against a variety of insects. These chemicals were
+						introduced in the 1940s, and many of their uses have been
+						cancelled or restricted by the U.S. EPA because of their
+						environmental persistence and potential adverse effects on
+						wildlife and human health. Many organochlorines are no longer used
+						widely in the U.S., but other countries continue to use them.</p>
+				</div>
+				<div id="list-pcb-info" class="invisible">
+					<div class="tiny-icon-box">
+						<img src="images/pcb_icon.png" alt="pcbIcon" class="category-icon-small">
+					</div>
+					<p class="label">Polychlorinated Biphenyls</p>
+					<p>Polychlorinated biphenyls (PCBs) are a class of chlorinated
+						aromatic hydrocarbon chemicals that once were used as
+						heat-exchanger, transformer, and hydraulic fluids, and as
+						additives to paints, oils, joint caulking, and floor tiles. The
+						different types of PCB chemicals are known as congeners, which are
+						compounds that are distinguished by the number of chlorine atoms
+						and their location on the biphenyl structure. Peak production
+						occurred in the early 1970s, and production was banned in the
+						United States after 1979. More than 1.5 billion pounds of PCBs
+						were manufactured in the United States prior to 1977. Continued
+						concern about these chemicals is because of their persistence in
+						the environment and accumulation in wildlife and the animal food
+						chain. PCBs enter the food chain by a variety of routes, including
+						migration into food from external sources, contamination of animal
+						feeds, and accumulation in the fatty tissues of animals. PCBs are
+						found at higher concentrations in fatty foods (e.g., dairy
+						products and fish) and food is the main source of exposure for the
+						general population. The transfer of PCBs from mother to infant via
+						breast milk is another important source of exposure. Exposure to
+						these chemicals nearly always occurs as mixtures rather than as
+						individual PCBs.</p>
+				</div>
+				<div id="list-pde-info" class="invisible">
+					<div class="tiny-icon-box">
+						<img src="images/pde-47_icon.png" alt="pdeIcon" class="category-icon-small">
+					</div>
+					<p class="label">PDE-47</p>
+					<p>Polybrominated diphenyl ethers (PBDEs) and
+						2,2’,4,4’,5,5’-hexabromobiphenyl (PBB-153) are included in a
+						larger group of chemicals known as brominated flame retardants
+						(BFRs) that are added to products such as foam padding, textiles,
+						or plastics to retard combustion. BFRs are not chemically bound to
+						the flame-retarded material, so they can enter the environment
+						from volatilization, leaching, or degradation of BFR-containing
+						products. PBDEs are generally persistent in the environment and
+						have been measured in aquatic sediments, house dust, and aquatic
+						and terrestrial animals. PBDEs have been shown to bioaccumulate in
+						fish. Humans may be exposed though the diet, including breast
+						feeding, and by contact with BFR-treated products and contaminated
+						house dust. The elimination rate of these BFRs from the human body
+						depends on the specific PBDE congener and can vary from a few
+						weeks to several months. PBB-153 has an elimination half-life
+						measured in decades.</p>
+				</div>
+				<div id="list-insesticides-info" class="invisible">
+					<div class="tiny-icon-box">
+						<img src="images/insecticide_icon.png" alt="insestIcon" class="category-icon-small">
+					</div>
+					<p class="label">Insesticides</p>
+					<p>Organophosphorus insecticides, which are active against a
+						broad spectrum of insects, have accounted for a large share of all
+						insecticides used in the United States. Although organophosphorus
+						insecticides are still used for insect control on many food crops,
+						most residential uses have been phased out in the United States as
+						a result of implementation of the Food Quality Protection Act of
+						1996. Pesticide residues and their metabolites in human tissues
+						and fluids can be indicative of pesticide exposure and the total
+						body burden of these pesticides. About 75% of registered
+						organophosphorus insecticides are metabolized in the body to
+						measurable dialkyl phosphate (DAP) metabolites. Dialkyl phosphates
+						may also occur in the environment as a result of degradation of
+						organophosphorus insecticides, and therefore, the presence in a
+						person’s urine may reflect exposure to the metabolite itself.</p>
+				</div>
+				<div id="list-dehp-info" class="invisible">
+					<div class="tiny-icon-box">
+						<img src="images/dehp_icon.png" alt="dehpIcon" class="category-icon-small">
+					</div>
+					<p class="label">Phthalates and Plasticizers (DEHP)</p>
+					<p>Phthalate acid esters (phthalates) have been used
+						extensively as plasticizers in a wide range of applications such
+						as children’s toys, food packaging, personal care products, and
+						medical supplies. Because some of these compounds have been shown
+						to bind to estrogen receptors and have been associated with
+						estrogenic effects in laboratory animals, increasing concerns have
+						been expressed about phthalate usage in food packaging materials,
+						personal care products, and children’s toys. Measurement of
+						urinary phthalate metabolites in humans is useful to evaluate
+						recent exposure and potential human health effects from these
+						chemicals.</p>
+				</div>
+				<div id="list-age-info" class="invisible">
+					<div class="tiny-icon-box">
+						<img src="images/age_icon_trans.png" alt="Icon" class="category-icon-small">
+					</div>
+					<p class="label">Age</p>
+					<p>Age in years, at the time of the screening interview, is
+						reported for survey participants between the ages of 1 and 79
+						years of age. All responses of participants aged 80 years and
+						older are coded as ‘80.’ The reporting of age in single years for
+						adults 80 years and older was determined to be a disclosure risk.
+						RIDAGEYR was calculated based on the participant’s date of birth.
+						In rare cases, the actual date of birth was missing but the
+						participant’s age in years was provided, then the reported age was
+						used.</p>
+				</div>
+				<div id="list-country-info" class="invisible">
+					<div class="tiny-icon-box">
+						<img src="images/country_icon_trans.png" alt="Icon" class="category-icon-small">
+					</div>
+					<p class="label">Country of Birth</p>
+					<p>Starting in 2011, country of birth is coded according to two categories: 1) Born in 50
+						U.S. states or Washington, DC; and 2) Born in other countries,
+						including U.S. territories.</p>
+				</div>
+				<div id="list-gender-info" class="invisible">
+					<div class="tiny-icon-box">
+						<img src="images/gender_icon_trans.png" alt="Icon" class="category-icon-small">
+					</div>
+					<p class="label">Gender</p>
+					<p>Gender of the participant</p>
+				</div>
+				<div id="list-income-info" class="invisible">
+					<div class="tiny-icon-box">
+						<img src="images/income_icon_trans.png" alt="Icon" class="category-icon-small">
+					</div>
+					<p class="label">Income</p>
+					<p>This variable indicates the total annual family income or
+						annual individual income (for households with one person or
+						households comprised of unrelated individuals). A family is
+						defined as a group of two people or more (one of whom is the
+						householder) related by birth, marriage, or adoption and residing
+						together.</p>
+				</div>
+				
+				<div id="list-education-info" class="invisible">
+					<div class="tiny-icon-box">
+						<img src="images/education_icon_trans.png" alt="Icon" class="category-icon-small">
+					</div>
+					<p class="label">Education</p>
+					<p>This variable is the highest grade or level of education
+						completed by adults 20 years and older. The response categories
+						are: less than 9th grade education, 9-11th grade education
+						(includes 12th grade and no diploma), High school graduate/GED,
+						some college or associates (AA) degree, and college graduate or
+						higher.</p>
+				</div>
+				
+				<div id="list-smoking-info" class="invisible">
+					<div class="tiny-icon-box">
+						<img src="images/smoking_icon_trans.png" alt="Icon" class="category-icon-small">
+					</div>
+					<p class="label">Smoking</p>
+					<p>The Smoking and Tobacco use (SMQ) section includes an
+						extensive array of questions on cigarette and tobacco use. The
+						sources of the questions found in this sections includes cigarette use: Ever used and history of use, age at
+						initiation, current use, past 30-day prevalence, amount used, etc.</p>
+				</div>
+				
+				<div id="list-race-info" class="invisible">
+					<div class="tiny-icon-box">
+						<img src="images/race_icon_trans.png" alt="Icon" class="category-icon-small">
+					</div>
+					<p class="label">Race / Ethnicity</p>
+					<p>This is the race-ethnicity variable. Non-Hispanic Asian
+						participants are grouped with other non-Hispanic races (other
+						non-Hispanic race including non-Hispanic multiracial).</p>
+				</div>
+				
+				<div id="list-stayus-info" class="invisible">
+					<div class="tiny-icon-box">
+						<img src="images/stayus_icon.gif" alt="Icon" class="category-icon-small">
+					</div>
+					<p class="label">Length of Stay in the US</p>
+					<p>This variable is the number of years the participant has
+						lived in the United States. Participants who were born outside the
+						U.S. were asked the month and year when they came to the U.S. to
+						live.</p>
+				</div>
+			</div>
+			<div class="information-buttons">
+				<a href="JavaScript:void(0)" class="button alt" id="CloseInfoButton">Close</a>
+			</div>
+		</div>
+
+
 	</section>
 	
 	<section id="third-section">
