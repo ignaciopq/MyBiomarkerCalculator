@@ -34,7 +34,9 @@ section h2 {
 #second-section > p {
 	width: 50%;
 	text-align: center;
-	padding: 2em;
+	padding: 1em;
+	margin-bottom: 1em;
+/* 	margin-top: 1em; */
 } 
 #first-section {
 	padding-top: 10%;
@@ -351,14 +353,21 @@ header nav>ul>li a:hover, header >h1>a:hover {
 .column-list {
 	display: inline-block;
 	color: white;
-	padding: 1em;
-	margin: 1em;
+	padding: 0em;
+	margin: 0em;
+	padding-left: 1em;
+	margin-left: 1em;
+	padding-right: 1em;
+	margin-right: 1em;
 	border-radius: 10px;
 	font-size: 1.5em;
 	vertical-align: top;
 	text-align: left;
 }
 
+.column-list > ul {
+	margin-bottom: 0em;
+}
 strong {
 	color: white;
 }
