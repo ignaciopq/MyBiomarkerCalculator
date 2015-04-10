@@ -76,16 +76,31 @@ function showbubble(root){
 		var factor=resObj[0];
 		var chemical=resObj[1];
 		var units="";
-		if(chemical=='lead'){
+		if(chemical=='bloodLead'){
 			units='(ug/dL)';
 		}
 		else if(chemical=='cotinine'){
 			units='(ng/mL)';
 		}
-		else if(chemical=='cotinine'){
+		else if(chemical=='mercury'){
+			units='(ug/L)';
+		}
+		else if(chemical=='diethylthiophosphate'){
+			units='(ug/L)';
+		}
+		else if(chemical=='bisphenol'){
 			units='(ng/mL)';
 		}
-		else if(chemical=='cotinine'){
+		else if(chemical=='dde'){
+			units='(ng/g)';
+		}
+		else if(chemical=='pcb153'){
+			units='(ng/g)';
+		}
+		else if(chemical=='pde'){
+			units='(ng/mL)';
+		}
+		else if(chemical=='hexylphthalate'){
 			units='(ng/mL)';
 		}
 	*/
@@ -134,6 +149,15 @@ function showbubble(root){
 	.attr('transform','translate(0,25)')
 	.style("text-anchor", "middle")
 	.text(function(d) { return format(d.value ); });
+	/*
+	Changes for the UNIT in the Bubble
+	node.append("text")
+	.attr("dy", ".3em")
+	.attr('class','white')
+	.attr('transform','translate(0,50)')
+	.style("text-anchor", "middle")
+	.text(function(d) { return units; });
+	*/
 	//.text(function(d) { return d.className.substring(0, d.r / 3) + ; });
 
 	//d3.select(self.frameElement).style("height", diameter + "px");
