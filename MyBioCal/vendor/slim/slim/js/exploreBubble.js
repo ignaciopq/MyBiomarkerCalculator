@@ -70,6 +70,25 @@ function showbubble(root){
     //.domain([root.children[0], root.children[1], root.children[2],root.children[3],root.children[4],root.children[5]])
     .range(["#353F5A", "#3D3540" , "#BB958A","#B07378","#745E60","#38425B"]);
 	
+	/*
+	Changes for the UNITS
+		var resObj=Object.getOwnPropertyNames ( root.children[0] );
+		var factor=resObj[0];
+		var chemical=resObj[1];
+		var units="";
+		if(chemical=='lead'){
+			units='(ug/dL)';
+		}
+		else if(chemical=='cotinine'){
+			units='(ng/mL)';
+		}
+		else if(chemical=='cotinine'){
+			units='(ng/mL)';
+		}
+		else if(chemical=='cotinine'){
+			units='(ng/mL)';
+		}
+	*/
 
 	var bubble = d3.layout.pack()
 	.sort(null)
