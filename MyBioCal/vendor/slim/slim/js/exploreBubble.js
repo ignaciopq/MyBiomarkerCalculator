@@ -94,6 +94,9 @@ function showbubble(root){
 		else if(chemical=='dde'){
 			units='(ng/g)';
 		}
+		else if(chemical=='pde'){
+			units='(ng/g)';
+		}
 		else if(chemical=='pcb153'){
 			units='(ng/g)';
 		}
