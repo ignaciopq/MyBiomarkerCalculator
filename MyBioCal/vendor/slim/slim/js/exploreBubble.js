@@ -71,7 +71,7 @@ function showbubble(root){
     .range(["#353F5A", "#3D3540" , "#BB958A","#B07378","#745E60","#38425B"]);
 	
 	/*
-	Changes for the UNITS
+	Changes for the UNITS */
 		var resObj=Object.getOwnPropertyNames ( root.children[0] );
 		var factor=resObj[0];
 		var chemical=resObj[1];
@@ -97,13 +97,10 @@ function showbubble(root){
 		else if(chemical=='pcb153'){
 			units='(ng/g)';
 		}
-		else if(chemical=='pde'){
-			units='(ng/mL)';
-		}
 		else if(chemical=='hexylphthalate'){
 			units='(ng/mL)';
 		}
-	*/
+	
 
 	var bubble = d3.layout.pack()
 	.sort(null)
@@ -150,14 +147,14 @@ function showbubble(root){
 	.style("text-anchor", "middle")
 	.text(function(d) { return format(d.value ); });
 	/*
-	Changes for the UNIT in the Bubble
+	Changes for the UNIT in the Bubble*/
 	node.append("text")
 	.attr("dy", ".3em")
 	.attr('class','white')
 	.attr('transform','translate(0,50)')
 	.style("text-anchor", "middle")
 	.text(function(d) { return units; });
-	*/
+	
 	//.text(function(d) { return d.className.substring(0, d.r / 3) + ; });
 
 	//d3.select(self.frameElement).style("height", diameter + "px");
